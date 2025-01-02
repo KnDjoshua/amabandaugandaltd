@@ -29,11 +29,7 @@ h2 {
 /* Header */
 header {
     height: 100vh;
-    /* background: linear-gradient(135deg, #00ff0d, #1b5e20); */
-    background-image: url(/style/laminated_timber.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    background: linear-gradient(135deg, #00ff0d, #001802);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -154,57 +150,93 @@ section {
     margin: 10px 0;
 }
 
-/* Bamboo Section */
+
+
+
+/* Bamboo Specs Section */
 .bamboo-specs {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 40px;
     background: #f4f4f4;
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.bamboo-item {
+    text-align: center;
+  }
+  
+  .bamboo-specs h1 {
+    font-size: 2.5em;
+    color: #2e7d32;
     margin-bottom: 20px;
-    padding: 15px;
+  }
+  
+  /* Grid Layout */
+  .bamboo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: stretch;
+    justify-content: center;
+  }
+  
+  /* Bamboo Items */
+  .bamboo-item {
     background: #fff;
-    border-radius: 8px;
+    border-radius: 12px;
+    padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.bamboo-item h2 {
+    transform: scale(1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .bamboo-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .bamboo-item h2 {
+    font-size: 1.5em;
     color: #1b5e20;
     margin-bottom: 10px;
-}
-
-.bamboo-item ul {
+  }
+  
+  .bamboo-item ul {
     list-style: none;
     padding: 0;
-}
-
-.bamboo-item li {
+    text-align: left;
+  }
+  
+  .bamboo-item li {
     margin: 5px 0;
+    font-size: 1em;
     color: #333;
-}
-
-.bamboo-item li strong {
+  }
+  
+  .bamboo-item li strong {
     color: #1b5e20;
-}
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .bamboo-specs {
+      padding: 20px;
+    }
+  
+    .bamboo-item {
+      padding: 15px;
+    }
+  
+    .bamboo-item h2 {
+      font-size: 1.2em;
+    }
+  }
 
-.bamboo-notes {
-    margin-top: 20px;
-    background: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
 
-.bamboo-notes h3 {
-    color: #388e3c;
-    margin-bottom: 10px;
-}
 
-/* Footer */
+
+
+
+  /* Footer */
 footer {
     text-align: center;
     padding: 10px;
