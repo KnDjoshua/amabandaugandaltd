@@ -6,13 +6,11 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f8f8f8;
-    overflow-x: hidden;
-    /* Prevent horizontal scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Header */
 header {
-    background-attachment: fixed;
     height: 100vh;
     background: linear-gradient(135deg, #2e7d32, #1b5e20);
     color: #fff;
@@ -60,7 +58,7 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
-    transition: color 0.3s ease, transform 0.4s ease;
+    transition: color 0.3s ease, transform 0.8s ease;
 }
 
 nav a:hover {
@@ -70,16 +68,13 @@ nav a:hover {
 
 /* Active link highlight for Scroll Spy */
 nav a.active {
-    color: #00ff08;
-    /* Light green */
-    border-bottom: 2px solid #00ff08;
-    /* Underline for active link */
+    color: #00ff22; /* Light green */
+    border-bottom: 2px solid #00ff22; /* Underline for active link */
 }
 
 /* Mobile Menu Styling */
 #menu-toggle {
-    display: none;
-    /* Initially hidden */
+    display: none; /* Initially hidden */
     background-color: #2e7d32;
     color: white;
     border: none;
@@ -97,20 +92,17 @@ nav a.active {
 
 @media (max-width: 768px) {
     #menu-toggle {
-        display: block;
-        /* Show toggle button only on smaller screens */
+        display: block; /* Show toggle button only on smaller screens */
     }
 
     nav {
-        display: none;
-        /* Hide navigation links initially */
+        display: block; /* Hide navigation links initially */
         flex-direction: column;
         align-items: center;
     }
 
     nav.active {
-        display: flex;
-        /* Show navigation links when toggle is active */
+        display: flex; /* Show navigation links when toggle is active */
         position: absolute;
         top: 50px;
         left: 0;
@@ -129,20 +121,17 @@ nav a.active {
 /* Responsive Design */
 @media (max-width: 768px) {
     #menu-toggle {
-        display: block;
-        /* Show toggle button only on smaller screens */
+        display: block; /* Show toggle button only on smaller screens */
     }
 
     nav {
-        display: none;
-        /* Hide navigation links initially */
+        display: block; /* Hide navigation links initially */
         flex-direction: column;
         align-items: center;
     }
 
     nav.active {
-        display: flex;
-        /* Show navigation links when toggle is active */
+        display: flex; /* Show navigation links when toggle is active */
         position: absolute;
         top: 50px;
         left: 0;
