@@ -14,15 +14,14 @@
     <div class="spinner"></div>
   </div>
 
-  <header>
+  <header id="home">
     <nav id="nav-links">
-      <a href="#">Home</a>
+      <a href="#home">Home</a>
       <a href="#about">About Us</a>
       <a href="#products">Products</a>
       <a href="#contact">Contact Us</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <!-- <button id="menu-toggle">&#9776;</button> -->
     <div>
       <h1>Amabanda Uganda Ltd.</h1>
       <p>Maximizing economic, social, and environmental impact through innovative bamboo solutions.</p>
@@ -109,33 +108,52 @@
 
   <!-- Scripts -->
 
-
-
   <script>
-    // Scroll Spy Functionality
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("nav a");
+    // Smooth scrolling for all navigation links
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent the default jump to the link
 
-    window.addEventListener("scroll", () => {
-      let current = "";
+        const targetId = this.getAttribute('href').substring(1); // Get the target section ID
+        const targetSection = document.getElementById(targetId);
 
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 60; // Adjusted offset for better accuracy
-        const sectionHeight = section.clientHeight;
-
-        if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
-          current = section.getAttribute("id");
-        }
-      });
-
-      navLinks.forEach((link) => {
-        link.classList.remove("active");
-        if (link.getAttribute("href").substring(1) === current) {
-          link.classList.add("active");
+        if (targetSection) {
+          targetSection.scrollIntoView({
+            behavior: 'smooth', // Smooth scrolling
+            block: 'start', // Scroll to the start of the section
+          });
         }
       });
     });
   </script>
+
+<script>
+  // Scroll Spy Functionality
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("nav a");
+
+  window.addEventListener("scroll", () => {
+    let currentSection = "";
+
+    // Determine the current section in view
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 70; // Adjust for fixed header
+      const sectionHeight = section.offsetHeight;
+
+      if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+        currentSection = section.getAttribute("id");
+      }
+    });
+
+    // Update the active class on navigation links
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href").substring(1) === currentSection) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
 </body>
 
 </html>
