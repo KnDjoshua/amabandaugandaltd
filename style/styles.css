@@ -29,7 +29,11 @@ h2 {
 /* Header */
 header {
     height: 100vh;
-    background: linear-gradient(135deg, #2e7d32, #1b5e20);
+    /* background: linear-gradient(135deg, #00ff0d, #1b5e20); */
+    background-image: url(/style/laminated_timber.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     color: #fff;
     display: flex;
     flex-direction: column;
