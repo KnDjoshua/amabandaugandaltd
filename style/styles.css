@@ -54,8 +54,6 @@ header p {
     line-height: 1.8;
 }
 
-
-
 /* Navigation Bar */
 nav {
     position: fixed;
@@ -96,17 +94,20 @@ nav a:hover {
     transform: scale(1.2);
 }
 
-/* Mobile Navigation */
+/* Mobile Navigation (Fixed to Bottom) */
 @media (max-width: 768px) {
     nav {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
+        position: fixed;
+        bottom: 0; /* Fix the navigation bar to the bottom of the screen */
+        top: unset; /* Override the default top positioning */
+        flex-direction: row; /* Ensure links remain in a row */
+        background: #075200; /* Add background for better visibility */
+        padding: 10px 0;
     }
     
     nav a {
-        margin: 10px 0;
-        font-size: 1.2rem;
+        margin: 0 10px;
+        font-size: 0.6rem; /* Reduce font size for smaller screens */
     }
 }
 
