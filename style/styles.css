@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+
+
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-style: normal;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -145,9 +151,19 @@ section {
 
 .processing-content img,
 .carbon-cycle-content img {
-    width: 100%;
+    position: sticky;
+    top: 0;
+    width: 300px;
+    float: left;
+    width: 50%;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.text2 {
+    float: right;
 }
 
 /* Before and After Section */
