@@ -6,25 +6,27 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f8f8f8;
-    overflow-x: hidden;
-    /* Prevent horizontal scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-h1,
-h2 {
+h1, h2 {
     text-align: center;
     color: #2e7d32;
 }
 
 h1 {
     margin: 20px 0;
-    font-size: 2em;
+    font-size: 2rem; /* Adjust font size using rem */
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     margin-bottom: 15px;
 }
+
+
+
+
 
 /* Header */
 header {
@@ -42,15 +44,17 @@ header {
 
 header h1 {
     color: rgb(109, 233, 93);
-    font-size: 3em;
+    font-size: 3rem;
     text-transform: uppercase;
 }
 
 header p {
-    font-size: 1.4em;
+    font-size: 1.4rem;
     max-width: 600px;
     line-height: 1.8;
 }
+
+
 
 /* Navigation Bar */
 nav {
@@ -64,6 +68,7 @@ nav {
     align-items: center;
     padding: 12px 0;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: transparent;
 }
 
 nav.scrolled {
@@ -76,7 +81,7 @@ nav a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -84,7 +89,6 @@ nav a.active {
     color: #00ff08;
     border-bottom: 2px solid #00ff0d;
     font-weight: bold;
-
 }
 
 nav a:hover {
@@ -92,9 +96,24 @@ nav a:hover {
     transform: scale(1.2);
 }
 
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+    
+    nav a {
+        margin: 10px 0;
+        font-size: 1.2rem;
+    }
+}
+
+
 /* Section Styling */
 section {
-    padding: 50px 30px ! important;
+    padding: 50px 30px !important;
     max-width: 1000px;
     margin: 80px auto;
     background: #fff;
@@ -145,10 +164,25 @@ section {
 
 .before h3,
 .after h3 {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     color: #388e3c;
     margin: 10px 0;
 }
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .before-after {
+        flex-direction: column;
+    }
+
+    .processing-content,
+    .carbon-cycle-content {
+        flex-direction: column;
+    }
+}
+
+
+
 
 
 
@@ -162,91 +196,82 @@ section {
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-  }
-  
-  .bamboo-specs h1 {
-    font-size: 2.5em;
+}
+
+.bamboo-specs h1 {
+    font-size: 2.5rem;
     color: #2e7d32;
     margin-bottom: 20px;
-  }
-  
-  /* Grid Layout */
-  .bamboo-grid {
+}
+
+/* Grid Layout */
+.bamboo-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     align-items: stretch;
     justify-content: center;
-  }
-  
-  /* Bamboo Items */
-  .bamboo-item {
+}
+
+/* Bamboo Items */
+.bamboo-item {
     background: #fff;
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transform: scale(1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .bamboo-item:hover {
+}
+
+.bamboo-item:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .bamboo-item h2 {
-    font-size: 1.5em;
+}
+
+.bamboo-item h2 {
+    font-size: 1.5rem;
     color: #1b5e20;
     margin-bottom: 10px;
-  }
-  
-  .bamboo-item ul {
+}
+
+.bamboo-item ul {
     list-style: none;
     padding: 0;
     text-align: left;
-  }
-  
-  .bamboo-item li {
+}
+
+.bamboo-item li {
     margin: 5px 0;
-    font-size: 1em;
+    font-size: 1rem;
     color: #333;
-  }
-  
-  .bamboo-item li strong {
+}
+
+.bamboo-item li strong {
     color: #1b5e20;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
     .bamboo-specs {
-      padding: 20px;
+        padding: 20px;
     }
-  
+
     .bamboo-item {
-      padding: 15px;
+        padding: 15px;
     }
-  
+
     .bamboo-item h2 {
-      font-size: 1.2em;
+        font-size: 1.2rem;
     }
-  }
+}
 
 
 
 
-
-
-  /* Footer */
+/* Footer */
 footer {
     text-align: center;
     padding: 10px;
     background: #2e7d32;
     color: #fff;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .before-after {
-        flex-direction: column;
-    }
 }
