@@ -5,28 +5,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amabanda Uganda Ltd. Catalogue</title>
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="style/styles.css">
 </head>
 
 <body>
-  <!--Loader-->
+  <!-- Loader -->
   <div id="loader">
     <div class="spinner"></div>
   </div>
 
   <header>
-    <nav>
-        <a href="#about">About Us</a>
-        <a href="#products">Products</a>
-        <a href="#contact">Contact Us</a>
-        <a href="#faq">FAQ</a>
+    <nav id="nav-links">
+      <a href="#">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact Us</a>
+      <a href="#faq">FAQ</a>
     </nav>
+    <button id="menu-toggle">&#9776;</button>
     <div>
-        <h1>Amabanda Uganda Ltd.</h1>
-        <p>Maximizing economic, social, and environmental impact through innovative bamboo solutions.</p>
+      <h1>Amabanda Uganda Ltd.</h1>
+      <p>Maximizing economic, social, and environmental impact through innovative bamboo solutions.</p>
     </div>
-</header>
+  </header>
 
+  <!-- About Section -->
   <section id="about" class="about">
     <h2>About Us</h2>
     <p>At Amabanda Uganda, we tailor the whole value chain around the unique capabilities of bamboo and maximize its
@@ -36,10 +39,12 @@
     <p>We transform sustainably harvested poles into long-term construction materials and carbon sinks like biochar.
       This innovation aligns with our mission to promote sustainability and environmental preservation.</p>
   </section>
+
+  <!-- Products Section -->
   <section id="products">
     <h2>Our Products</h2>
     <div class="product">
-      <img src="#" alt="Bamboo Poles" />
+      <img src="path/to/image" alt="Bamboo Poles" />
       <h3>Bamboo Poles</h3>
       <p>Details:</p>
       <ul>
@@ -51,7 +56,7 @@
       <p><span class="price">Prices include 18% VAT</span></p>
     </div>
     <div class="product">
-      <img src="#" alt="Strips and Splits" />
+      <img src="path/to/image" alt="Strips and Splits" />
       <h3>Strips and Splits</h3>
       <p>Details:</p>
       <ul>
@@ -60,7 +65,7 @@
       </ul>
     </div>
     <div class="product">
-      <img src="#" alt="Bamboo Fencing" />
+      <img src="path/to/image" alt="Bamboo Fencing" />
       <h3>Bamboo Fencing</h3>
       <p>Customized fencing solutions:</p>
       <ul>
@@ -69,18 +74,22 @@
       </ul>
     </div>
     <div class="product">
-      <img src="#" alt="Biochar" />
+      <img src="path/to/image" alt="Biochar" />
       <h3>Biochar</h3>
       <p>Carbon-rich material for soil improvement and other uses.</p>
       <p><span class="price">750,000 UGX per ton</span></p>
     </div>
   </section>
+
+  <!-- Contact Section -->
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
     <p>Email: <a href="mailto:info@amabanda.com">info@amabanda.com</a></p>
     <p>Phone: +256 (0)760207450, +256 (0)709751958</p>
     <p>Website: <a href="http://www.amabanda.com" target="_blank">www.amabanda.com</a></p>
   </section>
+
+  <!-- FAQ Section -->
   <section id="faq" class="faq">
     <h2>Frequently Asked Questions</h2>
     <div>
@@ -92,43 +101,49 @@
       <p>Yes, with proper treatment, bamboo can last up to 50 years or more.</p>
     </div>
   </section>
+
+  <!-- Footer -->
   <footer>
     <p>&copy; 2024 Amabanda Uganda Ltd. | All Rights Reserved.</p>
   </footer>
 
+  <!-- Scripts -->
 
 
 
-
-  <!-- loader script -->
   <script>
-    // Simulate page load completion
-    window.addEventListener('load', function () {
-      document.body.classList.add('loaded');
-    });
-  </script>
-  <script>
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('nav a').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        document.getElementById(targetId).scrollIntoView({
-          behavior: 'smooth'
-        });
+    // Scroll Spy Functionality
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 60; // Adjusted offset for better accuracy
+        const sectionHeight = section.clientHeight;
+
+        if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").substring(1) === current) {
+          link.classList.add("active");
+        }
       });
     });
 
-    // Toggle mobile menu visibility
+    // Mobile Menu Toggle
     const menuToggleButton = document.getElementById("menu-toggle");
-    const navLinks = document.getElementById("nav-links");
+    const nav = document.querySelector("nav");
 
-    menuToggleButton.addEventListener('click', () => {
-      navLinks.classList.toggle("active");
+    menuToggleButton.addEventListener("click", () => {
+      nav.classList.toggle("active");
     });
   </script>
-  
-
 </body>
 
 </html>
