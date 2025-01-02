@@ -222,14 +222,14 @@
         </ul>
       </div>
     </div>
-  <div class="bamboo-notes">
-    <h3>Additional Notes</h3>
-    <p><strong>Variations:</strong> Bamboo is a natural material, so there may be slight variations in the diameter of
-      the poles.</p>
-    <p><strong>Custom Lengths:</strong> Standard lengths are based on average poles (4 meters). However, custom
-      lengths can be provided upon request. Share your specifications, and we’ll ensure you receive the dimensions
-      needed for your project.</p>
-  </div>
+    <div class="bamboo-notes">
+      <h3>Additional Notes</h3>
+      <p><strong>Variations:</strong> Bamboo is a natural material, so there may be slight variations in the diameter of
+        the poles.</p>
+      <p><strong>Custom Lengths:</strong> Standard lengths are based on average poles (4 meters). However, custom
+        lengths can be provided upon request. Share your specifications, and we’ll ensure you receive the dimensions
+        needed for your project.</p>
+    </div>
   </section>
 
   <section id="quality-standards">
@@ -355,6 +355,32 @@
       loader.style.display = 'none';
     });
   </script>
+
+  <script>
+    // Get the button element
+    const scrollToTopButton = document.getElementById("scrollToTop");
+
+    // Show or hide the button when scrolling
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollToTopButton.style.display = "block";
+      } else {
+        scrollToTopButton.style.display = "none";
+      }
+    });
+
+    // Scroll to the top when the button is clicked
+    scrollToTopButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTop" title="Go to top">↑fghfghfghfghfghfsghf</button>
+
 </body>
 
 </html>
