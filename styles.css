@@ -1,0 +1,364 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+
+
+/* Header: Full Page Styling */
+header {
+    background: #2e7d32;
+    color: #fff;
+    position: relative;
+    /* For absolute positioning of the nav */
+    height: 100vh;
+    /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 250px;
+    /* Space for the navigation bar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    line-height: 1.2;
+}
+
+header p {
+    font-size: 1.5em;
+    margin: 20px 0 0;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Navigation Bar: Full Height with Grid Layout */
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 98%;
+    /* Matches the height of the header */
+    width: 250px;
+    /* Fixed width for the navigation bar */
+    background: #1b5e20;
+    /* Dark green background */
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    /* Divide into 4 equal rows */
+    gap: 10px;
+    /* Space between the navigation items */
+    padding: 5px 5px;
+    /* Inner padding */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Items */
+nav a {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background: #2e7d32;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-left: 9px;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background: #388e3c;
+    /* Slightly brighter green on hover */
+    color: #c8e6c9;
+    /* Light green text */
+}
+
+/* Icon Placeholder */
+nav a span.icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2e7d32;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header {
+        padding-left: 200px;
+        /* Adjust space for smaller nav */
+    }
+
+    nav {
+        width: 200px;
+    }
+
+    nav a {
+        font-size: 1em;
+        padding: 8px;
+    }
+
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    header p {
+        font-size: 1.2em;
+        padding: 0 20px;
+    }
+}
+
+
+/* Section Styling */
+section {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(226, 36, 36, 0.1);
+    margin-bottom: 20px;
+}
+
+/* About Section */
+.about p {
+    margin: 10px 0;
+}
+
+/* Product Section */
+.product {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.product h3 {
+    color: #2e7d32;
+    margin-top: 0;
+}
+
+.product img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 15px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.product ul {
+    margin: 0;
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.price {
+    color: #d32f2f;
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Contact Section */
+.contact p {
+    margin: 10px 0;
+}
+
+.contact a {
+    color: #2e7d32;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* FAQ Section */
+.faq h3 {
+    color: #2e7d32;
+    margin-top: 0;
+}
+
+/* Footer */
+footer {
+    background: #2e7d32;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    /* General Adjustments for Small Screens */
+    body {
+        font-size: 90%;
+    }
+
+    /* Adjust header text size */
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    /* Navigation links */
+    nav a {
+        margin: 0 10px;
+        font-size: 1em;
+    }
+
+    /* Product Images */
+    .product img {
+        max-width: 100%;
+    }
+
+    /* Section Padding */
+    section {
+        padding: 15px;
+    }
+}
+
+
+/* MOREEEEEEEEEE */
+/* Mobile Menu Styles */
+#menu-toggle {
+    display: none;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    font-size: 1.5em;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Hide menu items initially on mobile */
+#nav-links {
+    display: flex;
+    justify-content: center;
+}
+
+#nav-links.active {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+#nav-links a {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+
+    /* Mobile Navigation */
+    #menu-toggle {
+        display: inline-block;
+    }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #nav-links a {
+        padding: 10px 0;
+    }
+
+    /* Smooth scroll adjustment for small screens */
+    body {
+        font-size: 16px;
+    }
+
+    /* Adjust header text size */
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    nav a {
+        font-size: 1.1em;
+    }
+}
+
+
+
+
+
+
+
+
+/* loader */
+
+/* Full-page loader container */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 125, 50, 0.9);
+    /* Matching green with opacity */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Spinning loader animation */
+.spinner {
+    width: 80px;
+    height: 80px;
+    border: 8px solid #c8e6c9;
+    /* Light green */
+    border-top: 8px solid #fff;
+    /* White for contrast */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Keyframes for spinning animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Hide loader after loading */
+body.loaded #loader {
+    display: none;
+}
+
+/* loader ends */
