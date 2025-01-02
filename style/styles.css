@@ -1,0 +1,169 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+}
+
+/* Header */
+header {
+    background-attachment: fixed;
+    height: 100vh;
+    background: linear-gradient(135deg, #2e7d32, #1b5e20);
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+header p {
+    font-size: 1.4em;
+    margin: 10px 0 0;
+    max-width: 600px;
+    line-height: 1.8;
+}
+
+/* Navigation Bar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+/* Navigation Links */
+nav a {
+    margin: 0 15px;
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease, transform 0.4s ease;
+}
+
+nav a:hover {
+    color: #388e3c;
+    transform: scale(1.50);
+}
+
+/* Active link highlight for Scroll Spy */
+nav a.active {
+    color: #00ff08;
+    /* Light green */
+    border-bottom: 2px solid #00ff08;
+    /* Underline for active link */
+}
+
+/* Mobile Menu Styling */
+#menu-toggle {
+    display: none;
+    /* Initially hidden */
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    font-size: 1.5em;
+    padding: 10px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 1100;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+        /* Show toggle button only on smaller screens */
+    }
+
+    nav {
+        display: none;
+        /* Hide navigation links initially */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav.active {
+        display: flex;
+        /* Show navigation links when toggle is active */
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+        margin: 10px 0;
+        font-size: 1em;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+        /* Show toggle button only on smaller screens */
+    }
+
+    nav {
+        display: none;
+        /* Hide navigation links initially */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav.active {
+        display: flex;
+        /* Show navigation links when toggle is active */
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+        margin: 10px 0;
+        font-size: 1em;
+    }
+}
+
+/* Section Styling */
+section {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
