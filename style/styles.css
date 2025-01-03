@@ -4,29 +4,35 @@
 .whatsapp-button {
     /* background-color: green; */
     position: fixed;
-    top: 50%;
-    left: -50px; /* Start hidden on the left */
+    top: 80%;
+    left: 10px;
+    /* Start hidden on the left */
     transform: translateY(-50%);
     z-index: 1000;
     animation: whatsapp-peek 3s infinite ease-in-out;
-  }
-  
-  /* Image inside the button */
-  .whatsapp-button img {
+}
+
+/* Image inside the button */
+.whatsapp-button img {
     width: 50px;
     height: 50px;
     cursor: pointer;
-  }
-  
-  /* Keyframes for the peeking effect */
-  @keyframes whatsapp-peek {
-    0%, 100% {
-      left: -50px; /* Fully hidden */
+}
+
+/* Keyframes for the peeking effect */
+@keyframes whatsapp-peek {
+
+    0%,
+    100% {
+        left: -50px;
+        /* Fully hidden */
     }
+
     50% {
-      left: 10px; /* Fully visible */
+        left: 10px;
+        /* Fully visible */
     }
-  }
+}
 
 
 
