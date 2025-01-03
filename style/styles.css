@@ -2,12 +2,13 @@
 
 /* Styling for the WhatsApp button container */
 .whatsapp-button {
+    /* background-color: green; */
     position: fixed;
     top: 50%;
     left: -50px; /* Start hidden on the left */
     transform: translateY(-50%);
     z-index: 1000;
-    animation: whatsapp-peek 5s infinite ease-in-out;
+    animation: whatsapp-peek 3s infinite ease-in-out;
   }
   
   /* Image inside the button */
