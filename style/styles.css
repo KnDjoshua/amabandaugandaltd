@@ -9,7 +9,7 @@
     /* Start hidden on the left */
     transform: translateY(-50%);
     z-index: 1000;
-    animation: whatsapp-peek 3s infinite ease-in-out;
+    /* animation: whatsapp-peek 3s infinite ease-in-out; */
 }
 
 /* Image inside the button */
@@ -256,7 +256,7 @@ section {
     max-width: 1200px;
     margin: 40px auto;
     padding: 40px;
-    background: #f4f4f4;
+    background: #ff0000;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -278,40 +278,151 @@ section {
 }
 
 /* Bamboo Items */
+/* /* General styling */
+#products {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+.bamboo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
 .bamboo-item {
     background: #fff;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transform: scale(1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    max-width: 300px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
 }
 
-.bamboo-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.bamboo-item h2 {
-    font-size: 1.5rem;
-    color: #1b5e20;
+/* Styling for images */
+.bamboo-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
     margin-bottom: 10px;
 }
 
-.bamboo-item ul {
-    list-style: none;
+.bamboo-images img {
+    width: 45%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.bamboo-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Bamboo details */
+ul {
+    list-style-type: none;
     padding: 0;
-    text-align: left;
+    margin: 10px 0;
 }
 
-.bamboo-item li {
-    margin: 5px 0;
-    font-size: 1rem;
-    color: #333;
+li {
+    margin-bottom: 5px;
 }
 
-.bamboo-item li strong {
-    color: #1b5e20;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .bamboo-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bamboo-item {
+        max-width: 90%;
+    }
+}
+
+/* Product Catalogue General styling */
+#products {
+    font-family: "Montserrat", serif;
+
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+.bamboo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.bamboo-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    max-width: 300px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Styling for images */
+.bamboo-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.bamboo-images img {
+    width: 45%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.bamboo-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Bamboo details */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .bamboo-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bamboo-item {
+        max-width: 90%;
+    }
 }
 
 /* Responsive Design */
@@ -326,6 +437,118 @@ section {
 
     .bamboo-item h2 {
         font-size: 1.2rem;
+    }
+}
+
+
+
+
+/* General Styling */
+#quality-standards {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+/* Grid Layout with Overlapping Style */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    position: relative;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Product Cards */
+.product {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    overflow: hidden;
+    position: relative;
+    transform: translateY(0);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Container with Animation */
+.image-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    filter: grayscale(40%);
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+/* Product Details */
+h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    color: #555;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #666;
+}
+
+.price {
+    font-weight: bold;
+    color: #27ae60;
+    font-size: 1.2rem;
+}
+
+/* Overlapping and Stylish Placement */
+.product:nth-child(odd) {
+    transform: rotate(-2deg) translateX(-20px);
+}
+
+.product:nth-child(even) {
+    transform: rotate(2deg) translateX(20px);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product:nth-child(odd),
+    .product:nth-child(even) {
+        transform: rotate(0deg) translateX(0);
     }
 }
 
