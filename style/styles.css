@@ -45,6 +45,59 @@ h2 {
     margin-bottom: 15px;
 }
 
+/* Add smooth hover effect */
+.navbar-nav .nav-item .nav-link {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #00ff0d;
+    /* Change to your desired hover color */
+    transform: scale(1.1);
+    /* Slightly enlarge the link on hover */
+}
+
+/* Adjust navbar collapse for small devices */
+.navbar-collapse {
+    transition: max-height 0.5s ease-in-out;
+}
+
+
+
+/* Fullscreen navbar on small devices */
+@media (max-width: 991px) {
+    .navbar-collapse {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.9); /* Dark overlay for the fullscreen navbar */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+  
+    .navbar-nav {
+      text-align: center;
+      width: 100%;
+    }
+  
+    .navbar-nav .nav-item {
+      margin-bottom: 1rem;
+    }
+  
+    .navbar-toggler-icon {
+      background-color: #fff; /* Adjust the icon color */
+    }
+  }
+
+
+
+
+
+
 /* Header */
 header {
     height: 100vh;
