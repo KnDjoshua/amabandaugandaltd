@@ -2,14 +2,11 @@
 
 /* Styling for the WhatsApp button container */
 .whatsapp-button {
-    /* background-color: green; */
     position: fixed;
     top: 80%;
     left: 10px;
-    /* Start hidden on the left */
     transform: translateY(-50%);
     z-index: 1000;
-    /* animation: whatsapp-peek 3s infinite ease-in-out; */
 }
 
 /* Image inside the button */
@@ -17,28 +14,6 @@
     width: 50px;
     height: 50px;
     cursor: pointer;
-}
-
-/* Keyframes for the peeking effect */
-@keyframes whatsapp-peek {
-
-    0%,
-    100% {
-        left: -50px;
-        /* Fully hidden */
-    }
-
-    50% {
-        left: 10px;
-        /* Fully visible */
-    }
-}
-
-
-
-
-.logo {
-    width: 7%;
 }
 
 /* General Styles */
@@ -52,11 +27,9 @@ body {
     color: #333;
     background-color: #f8f8f8;
     overflow-x: hidden;
-    /* Prevent horizontal scrolling */
 }
 
-h1,
-h2 {
+h1, h2 {
     text-align: center;
     color: #2e7d32;
 }
@@ -64,17 +37,12 @@ h2 {
 h1 {
     margin: 20px 0;
     font-size: 2rem;
-    /* Adjust font size using rem */
 }
 
 h2 {
     font-size: 1.5rem;
     margin-bottom: 15px;
 }
-
-
-
-
 
 /* Header */
 header {
@@ -147,23 +115,16 @@ nav a:hover {
     nav {
         position: fixed;
         bottom: 0;
-        /* Fix the navigation bar to the bottom of the screen */
-        top: unset;
-        /* Override the default top positioning */
         flex-direction: row;
-        /* Ensure links remain in a row */
         background: #075200;
-        /* Add background for better visibility */
         padding: 10px 0;
     }
 
     nav a {
         margin: 0 10px;
         font-size: 0.4rem;
-        /* Reduce font size for smaller screens */
     }
 }
-
 
 /* Section Styling */
 section {
@@ -174,82 +135,6 @@ section {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-.processing-content,
-.carbon-cycle-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: center;
-}
-
-.processing-content .image,
-.carbon-cycle-content .image {
-    flex: 1;
-}
-
-.processing-content img,
-.carbon-cycle-content img {
-    position: sticky;
-    top: 0;
-    width: 300px;
-    float: left;
-    width: 50%;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-
-
-.text2 {
-    float: right;
-}
-
-/* Before and After Section */
-.before-after {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-
-.before,
-.after {
-    text-align: center;
-    flex: 1;
-}
-
-.before img,
-.after img {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.before h3,
-.after h3 {
-    font-size: 1.2rem;
-    color: #388e3c;
-    margin: 10px 0;
-}
-
-/* Mobile View */
-@media (max-width: 768px) {
-    .before-after {
-        flex-direction: column;
-    }
-
-    .processing-content,
-    .carbon-cycle-content {
-        flex-direction: column;
-    }
-}
-
-
-
-
-
-
 
 /* Bamboo Specs Section */
 .bamboo-specs {
@@ -262,12 +147,6 @@ section {
     text-align: center;
 }
 
-.bamboo-specs h1 {
-    font-size: 2.5rem;
-    color: #2e7d32;
-    margin-bottom: 20px;
-}
-
 /* Grid Layout */
 .bamboo-grid {
     display: grid;
@@ -278,25 +157,6 @@ section {
 }
 
 /* Bamboo Items */
-/* /* General styling */
-#products {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    background-color: #f8f8f8;
-}
-
-h1,
-h2 {
-    text-align: center;
-}
-
-.bamboo-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
 .bamboo-item {
     background: #fff;
     border: 1px solid #ddd;
@@ -307,36 +167,6 @@ h2 {
     text-align: center;
     overflow: hidden;
     position: relative;
-}
-
-/* Styling for images */
-.bamboo-images {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-.bamboo-images img {
-    width: 45%;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s;
-}
-
-.bamboo-images img:hover {
-    transform: scale(1.05);
-}
-
-/* Bamboo details */
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 10px 0;
-}
-
-li {
-    margin-bottom: 5px;
 }
 
 /* Responsive adjustments */
@@ -351,111 +181,12 @@ li {
     }
 }
 
-/* Product Catalogue General styling */
-#products {
-    font-family: "Montserrat", serif;
-
-    padding: 20px;
-    background-color: #f8f8f8;
-}
-
-h1,
-h2 {
-    text-align: center;
-}
-
-.bamboo-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.bamboo-item {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    max-width: 300px;
-    text-align: center;
-    overflow: hidden;
-    position: relative;
-}
-
-/* Styling for images */
-.bamboo-images {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-.bamboo-images img {
-    width: 45%;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s;
-}
-
-.bamboo-images img:hover {
-    transform: scale(1.05);
-}
-
-/* Bamboo details */
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 10px 0;
-}
-
-li {
-    margin-bottom: 5px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .bamboo-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .bamboo-item {
-        max-width: 90%;
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .bamboo-specs {
-        padding: 20px;
-    }
-
-    .bamboo-item {
-        padding: 15px;
-    }
-
-    .bamboo-item h2 {
-        font-size: 1.2rem;
-    }
-}
-
-
-
-
-/* General Styling */
+/* Quality Standards Section */
 #quality-standards {
     font-family: Arial, sans-serif;
     padding: 20px;
     background-color: #f9f9f9;
     position: relative;
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2.5rem;
-    color: #333;
 }
 
 /* Grid Layout with Overlapping Style */
@@ -531,7 +262,6 @@ ul li {
     font-size: 1.2rem;
 }
 
-/* Overlapping and Stylish Placement */
 .product:nth-child(odd) {
     transform: rotate(-2deg) translateX(-20px);
 }
@@ -540,29 +270,11 @@ ul li {
     transform: rotate(2deg) translateX(20px);
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .product-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .product:nth-child(odd),
-    .product:nth-child(even) {
-        transform: rotate(0deg) translateX(0);
-    }
-}
-
-
-
-
-/* Scroll to Top Button */
 #scrollToTop {
     position: fixed;
     bottom: 70px;
-    /* Above the navigation bar */
     left: 20px;
     display: none;
-    /* Hidden by default */
     background-color: #ff0000;
     color: #ff0000;
     border: none;
@@ -580,12 +292,10 @@ ul li {
     transform: scale(1.1);
 }
 
-
 /* Footer */
 footer {
     text-align: center;
     padding: 10px;
-    padding-bottom: 35px;
     background: #2e7d32;
     color: #fff;
 }
