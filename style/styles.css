@@ -20,7 +20,6 @@
 body {
     font-family: "Montserrat", serif;
     font-weight: 400;
-    font-style: normal;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -52,9 +51,7 @@ h2 {
 
 .navbar-nav .nav-item .nav-link:hover {
     color: #00ff0d;
-    /* Change to your desired hover color */
     transform: scale(1.1);
-    /* Slightly enlarge the link on hover */
 }
 
 /* Adjust navbar collapse for small devices */
@@ -64,46 +61,9 @@ h2 {
 
 
 
-/* Fullscreen navbar on small devices */
-@media (max-width: 991px) {
-    .navbar-collapse {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.9);
-        /* Dark overlay for the fullscreen navbar */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-    }
-
-    .navbar-nav {
-        text-align: center;
-        width: 100%;
-    }
-
-    .navbar-nav .nav-item {
-        margin-bottom: 1rem;
-    }
-
-    .navbar-toggler-icon {
-        background-color: #fff;
-        /* Adjust the icon color */
-    }
-}
-
-
-
-
-
-
 /* Header */
 header {
     height: 100vh;
-    /* background: linear-gradient(135deg, #00ff0d, #001802); */
     background-image: url('/assets/images/maurits-bausenhart-RK8dJ-WymdU-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -152,7 +112,7 @@ nav.scrolled {
 
 nav a {
     margin: 0 15px;
-    color: #fff;
+    color: #970000;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1rem;
@@ -162,12 +122,16 @@ nav a {
 nav a.active {
     color: #00ff08;
     border-bottom: 2px solid #00ff0d;
-    font-weight: bold;
 }
 
 nav a:hover {
     color: #78ff7f;
     transform: scale(1.2);
+}
+
+/* Smooth transition for collapsing the navbar */
+.navbar-collapse {
+    transition: all 0.3s ease-in-out;
 }
 
 /* Mobile Navigation (Fixed to Bottom) */
@@ -182,35 +146,18 @@ nav a:hover {
 
     nav a {
         margin: 0 10px;
-        font-size: 0.4rem;
+        font-size: 0.9rem;
     }
 }
 
 /* Section Styling */
 section {
-    padding-top: 60px ! important;
+    padding-top: 60px !important;
     padding: 50px 30px !important;
     max-width: 1000px;
     margin: 80px auto;
     background: #fff;
     border-radius: 8px;
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
-}
-
-.productcatalogue {
-    background-image: url("/assets/images/lush-bamboo-grove-stockcake.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.sectionHeader {
-    font-weight: bold !important;
-
-}
-
-.products {
-    font-weight: bolder;
 }
 
 /* Bamboo Specs Section */
@@ -246,125 +193,13 @@ section {
     position: relative;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .bamboo-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .bamboo-item {
-        max-width: 90%;
-    }
-}
-
-/* Quality Standards Section */
-#quality-standards {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    background-color: #f9f9f9;
-    position: relative;
-}
-
-/* Grid Layout with Overlapping Style */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    position: relative;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Product Cards */
-.product {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    overflow: hidden;
-    position: relative;
-    transform: translateY(0);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
+/* Product Hover Effect */
 .product:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Image Container with Animation */
-.image-container {
-    width: 100%;
-    overflow: hidden;
-    border-radius: 12px;
-    position: relative;
-}
-
-.image-container img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.5s ease, filter 0.5s ease;
-    filter: grayscale(40%);
-}
-
-.image-container img:hover {
-    transform: scale(1.1);
-    filter: grayscale(0%);
-}
-
-/* Product Details */
-h3 {
-    margin-top: 15px;
-    font-size: 1.5rem;
-    color: #555;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 15px 0;
-}
-
-ul li {
-    margin-bottom: 10px;
-    font-size: 1rem;
-    color: #666;
-}
-
-.price {
-    font-weight: bold;
-    color: #27ae60;
-    font-size: 1.2rem;
-}
-
-.product:nth-child(odd) {
-    transform: rotate(-2deg) translateX(-20px);
-}
-
-.product:nth-child(even) {
-    transform: rotate(2deg) translateX(20px);
-}
-
-#scrollToTop {
-    position: fixed;
-    bottom: 70px;
-    left: 20px;
-    display: none;
-    background-color: #ff0000;
-    color: #ff0000;
-    border: none;
-    border-radius: 50%;
-    padding: 15px;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    z-index: 1000;
-}
-
-
+/* Social Icons */
 .social-icons {
     position: fixed;
     left: 20px;
@@ -376,33 +211,34 @@ ul li {
 }
 
 .social-icon {
-    /* background-color: #f80000; */
     color: #256aff;
-    font-size: 10px;
+    font-size: 25px;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 50%;
-    transition: background-color 0.9s ease;
+    transition: background-color 0.3s ease;
 }
 
 .social-icon:hover {
     background-color: #007bff;
 }
 
-.social-icon i {
-    font-size: 25px;
+/* Scroll-to-Top Button */
+#scrollToTop {
+    position: fixed;
+    bottom: 70px;
+    left: 20px;
+    display: none;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
-/* For smaller devices, icons stack and still remain fixed */
-@media (max-width: 767px) {
-    .social-icons {
-        left: 10px;
-        bottom: 10px;
-    }
-}
-
-
-
 
 #scrollToTop:hover {
     background-color: #388e3c;
