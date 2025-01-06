@@ -95,7 +95,7 @@
   <!-- Animated Section -->
   <section id="about" class="py-5 " data-aos="fade-up">
     <div class="container">
-<br><br>
+      <br><br>
       <h1 class="text-center sectionHeader" data-aos="fade-right ">About Us</h1>
       <p class="lead text-center" data-aos="fade-left">
         At Amabanda Uganda Ltd., we are dedicated to creating sustainable solutions that harness the unique capabilities
@@ -682,6 +682,19 @@
         document.querySelector('.navbar-toggler').addEventListener('click', function () {
           const navbarCollapse = document.querySelector('.navbar-collapse');
           navbarCollapse.classList.toggle('show');
+        });
+      </script>
+      <script>
+        // Close the navbar when a link is clicked on small screens
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+          link.addEventListener('click', () => {
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            // Check if the navbar is collapsed, then toggle it
+            if (navbarCollapse.classList.contains('show')) {
+              navbarToggler.click();
+            }
+          });
         });
       </script>
 </body>
