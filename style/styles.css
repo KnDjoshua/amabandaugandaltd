@@ -29,7 +29,8 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2 {
+h1,
+h2 {
     text-align: center;
     color: #2e7d32;
 }
@@ -128,12 +129,29 @@ nav a:hover {
 
 /* Section Styling */
 section {
+    padding-top: 60px ! important;
     padding: 50px 30px !important;
     max-width: 1000px;
     margin: 80px auto;
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+.productcatalogue {
+    background-image: url("/assets/images/lush-bamboo-grove-stockcake.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sectionHeader {
+    font-weight: bold !important;
+
+}
+
+.products {
+    font-weight: bolder;
 }
 
 /* Bamboo Specs Section */
@@ -286,6 +304,46 @@ ul li {
     transition: background-color 0.3s ease, transform 0.3s ease;
     z-index: 1000;
 }
+
+
+.social-icons {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 9999;
+}
+
+.social-icon {
+    /* background-color: #f80000; */
+    color: #256aff;
+    font-size: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    transition: background-color 0.9s ease;
+}
+
+.social-icon:hover {
+    background-color: #007bff;
+}
+
+.social-icon i {
+    font-size: 25px;
+}
+
+/* For smaller devices, icons stack and still remain fixed */
+@media (max-width: 767px) {
+    .social-icons {
+        left: 10px;
+        bottom: 10px;
+    }
+}
+
+
+
 
 #scrollToTop:hover {
     background-color: #388e3c;
