@@ -32,7 +32,9 @@
 
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbar" tabindex="0">
+  <!-- Your page content here -->
+
   <!-- Loader -->
   <!-- <div id="loader" class="d-flex justify-content-center align-items-center vh-100">
     <div class="spinner-border text-primary" role="status">
@@ -41,19 +43,27 @@
   </div> -->
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light" id="navbar">
     <div class="container">
-      <a class="navbar-brand" href="#home">Amabanda Uganda Ltd.</a>
+      <a class="navbar-brand" href="#">Amabanda Uganda Ltd.</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
           <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
         </ul>
       </div>
@@ -61,7 +71,7 @@
   </nav>
 
   <!-- Header -->
-  <header id="home" class="vh-100 d-flex flex-column justify-content-center align-items-center text-center bg-light">
+  <header class="vh-100 d-flex flex-column justify-content-center align-items-center text-center bg-light">
     <h1>Amabanda Uganda Ltd.</h1>
     <p>Maximizing economic, social, and environmental impact through innovative bamboo solutions.</p>
   </header>
@@ -85,8 +95,7 @@
   <!-- Animated Section -->
   <section id="about" class="py-5 " data-aos="fade-up">
     <div class="container">
-      <br>
-      <br>
+<br><br>
       <h1 class="text-center sectionHeader" data-aos="fade-right ">About Us</h1>
       <p class="lead text-center" data-aos="fade-left">
         At Amabanda Uganda Ltd., we are dedicated to creating sustainable solutions that harness the unique capabilities
@@ -141,7 +150,7 @@
 
 
   <!-- Hero Section -->
-  <section id="products" class="bg-light py-5 productcatalogue text-center">
+  <section id="services" class="bg-light py-5 productcatalogue text-center">
     <div class="container">
       <br><br>
       <h1 class="display-4 sectionHeader">Product Catalogue</h1>
@@ -667,6 +676,12 @@
           duration: 1000, // animation duration
           easing: 'ease-in-out', // animation easing function
           once: true, // animation only happens once
+        });
+      </script>
+      <script>
+        document.querySelector('.navbar-toggler').addEventListener('click', function () {
+          const navbarCollapse = document.querySelector('.navbar-collapse');
+          navbarCollapse.classList.toggle('show');
         });
       </script>
 </body>
