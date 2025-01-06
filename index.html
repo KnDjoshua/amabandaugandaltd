@@ -12,380 +12,538 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amabanda Uganda Ltd. Catalogue</title>
-  <link rel="stylesheet" href="style/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="style/styles.css"> -->
+  <head>
+    <!-- Add Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="style/styles.css">
+</head>
 </head>
 
 <body>
   <!-- Loader -->
-  <div id="loader">
-    <div class="spinner"></div>
+  <div id="loader" class="d-flex justify-content-center align-items-center vh-100">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
   </div>
 
-  <header id="home">
-
-    <nav id="nav-links">
-      <img src="/assets/images/logo.png" alt="Amabanda Logo" class="logo">
-      <a href="#home">Home</a>
-      <a href="#about">About Us</a>
-      <a href="#products">Products</a>
-      <a href="#contact">Contact Us</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-    <div>
-
-
-
-      <h1>Amabanda Uganda Ltd.</h1>
-      <p>Maximizing economic, social, and environmental impact through innovative bamboo solutions.</p>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">Amabanda Uganda Ltd.</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-
+  <!-- Header -->
+  <header id="home" class="vh-100 d-flex flex-column justify-content-center align-items-center text-center bg-light">
+    <h1>Amabanda Uganda Ltd.</h1>
+    <p>Maximizing economic, social, and environmental impact through innovative bamboo solutions.</p>
   </header>
 
   <!-- About Us Section -->
-  <section id="about" class="about">
-    <h1>About Us</h1>
-    <p>
-      At Amabanda Uganda Ltd., we are dedicated to creating sustainable solutions that harness the unique capabilities
-      of bamboo.
-      By optimizing the entire value chain, we aim to maximize bamboo's social, economic, and environmental impact.
-    </p>
-    <p>
-      Our commitment lies in transforming sustainably harvested bamboo into long-lasting construction materials,
-      biochar, and other eco-friendly products.
-      This not only promotes environmental preservation but also contributes to local communities through job creation
-      and innovation.
-    </p>
-  </section>
-
-  <!-- Processing Section -->
-  <section id="processing" class="processing">
-    <h2>Our Processing and Carbon Cycle</h2>
-    <div class="processing-content">
-      <div class="text">
-        <p>
-          At Amabanda, we follow a sustainable harvesting process that ensures bamboo plants are preserved while
-          maintaining high productivity.
-          By harvesting only a quarter of a bamboo plant annually, we promote a permanent forest that serves as a
-          renewable resource.
-        </p>
-        <p>
-          Our processing involves:
-        </p>
-        <ul>
-          <li>Careful selection and harvesting of mature bamboo poles.</li>
-          <li>State-of-the-art drying and treatment to enhance durability.</li>
-          <li>Transformation into construction materials, fencing panels, and biochar.</li>
-        </ul>
-      </div>
-      <div class="image">
-        <a href="/assets/images/Screenshot 2025-01-02 190026.png" download> <img class="sticky one"
-            src="/assets/images/Screenshot 2025-01-02 190026.png" alt="Processing Bamboo" /></a>
-      </div>
-
-
-      <div class="text2">
-        <p>
-          Bamboo plays a crucial role in carbon sequestration. Its rapid growth and dense biomass make it an excellent
-          tool for capturing carbon dioxide from the atmosphere.
-        </p>
-        <p>
-          The carbon cycle includes:
-        </p>
-        <ol>
-          <li>Absorption of CO<sub>2</sub> during bamboo growth.</li>
-          <li>Processing bamboo into durable materials or biochar, which locks in carbon.</li>
-          <li>Releasing minimal emissions through renewable and sustainable practices.</li>
-        </ol>
-        <p>
-          Our commitment to sustainability ensures that the carbon stored in bamboo is preserved for long-term use,
-          reducing overall emissions and promoting ecological balance.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="quality-standards">
-    <h1>Our Quality Standards</h1>
-
-    <!-- Sustainable Harvesting Section -->
-    <div class="standard-section">
-      <h2>Sustainable Harvesting</h2>
-      <p>
-        Our bamboo is harvested using sustainable practices that ensure both environmental
-        preservation and exceptional product quality. We follow a careful 4-year cycle, where only
-        the bamboo poles that have reached four years of age are harvested. These poles have
-        optimal strength and reduced sugar content, which makes them more resistant to pests
-        and decay.
+  <section id="about" class="py-5">
+    <div class="container">
+      <h1 class="text-center">About Us</h1>
+      <p class="lead text-center">
+        At Amabanda Uganda Ltd., we are dedicated to creating sustainable solutions that harness the unique capabilities
+        of bamboo.
       </p>
       <p>
-        By selectively harvesting mature bamboo, we promote continuous growth and natural
-        regeneration, preventing overharvesting and preserving the ecosystem. This approach
-        ensures that our bamboo is not only durable and resilient but also environmentally sustainable.
-      </p>
-      <div class="before-after">
-        <div class="before">
-          <h3>Before Sustainable Harvest</h3>
-          <img src="before-harvest.jpg" alt="Before Sustainable Harvest">
-        </div>
-        <div class="after">
-          <h3>After Sustainable Harvest</h3>
-          <img src="after-harvest.jpg" alt="After Sustainable Harvest">
-        </div>
-      </div>
-    </div>
-
-    <!-- Treatment Section -->
-    <div class="standard-section">
-      <h2>Treatment</h2>
-      <p>
-        The bamboo undergoes a meticulous treatment process to enhance its longevity. We
-        treat each pole using a 10% solution of boron salts, a safe preservative with limited
-        impact on the environment, to protect against pests, fungi, and decay.
-      </p>
-      <p>
-        This treatment is applied through either dipping and vertical soak diffusion methods, ensuring thorough
-        penetration of the preservative into the bamboo fibres. This process not only safeguards the structural
-        integrity of the bamboo but also preserves its natural beauty, providing a high-quality, long-lasting
-        product that meets the highest standards of excellence.
+        Our commitment lies in transforming sustainably harvested bamboo into long-lasting construction materials,
+        biochar, and other eco-friendly products.
       </p>
     </div>
   </section>
-  <section id="products" class="bamboo-specs">
-    <h1>Product Catalogue</h1>
-    <div class="bamboo-grid">
-      <div class="bamboo-item">
-        <div class="bamboo-images">
-          <img src="./assets/images/lush-bamboo-grove-stockcake.jpg" alt="Bamboo 1 - Front View">
-          <img src="./assets/images/lush-bamboo-grove-stockcake.jpg" alt="Bamboo 1 - Close-Up">
+
+
+  <!-- Quality Standards Section -->
+  <section id="standards" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-4">Our Quality Standards</h2>
+
+      <!-- Sustainable Harvesting -->
+      <div class="row">
+        <div class="col-md-6">
+          <h5>Sustainable Harvesting</h5>
+          <p>Our bamboo is harvested using sustainable practices that ensure both environmental preservation and
+            exceptional product quality. We follow a careful 4-year cycle, where only the bamboo poles that have reached
+            four years of age are harvested. These poles have optimal strength and reduced sugar content, making them
+            more resistant to pests and decay. By selectively harvesting mature bamboo, we promote continuous growth and
+            natural regeneration, preventing overharvesting and preserving the ecosystem. This approach ensures that our
+            bamboo is not only durable and resilient but also environmentally sustainable.</p>
         </div>
-        <h2>Bambussa Vulgaris Vitata (Yellow)</h2>
-        <ul>
-          <li><strong>Length:</strong> 6 meters</li>
-          <li><strong>Diameter:</strong> 80 – 120mm</li>
-          <li><strong>Untreated Price:</strong> 14,000 UGX</li>
-        </ul>
-      </div>
-      <div class="bamboo-item">
-        <div class="bamboo-images">
-          <img src="./assets/images/lush-bamboo-grove-stockcake.jpg" alt="Bamboo 1 - Front View">
-          <img src="./assets/images/lush-bamboo-grove-stockcake.jpg" alt="Bamboo 1 - Close-Up">
+        <div class="col-md-6">
+          <img src="before-sustainable-harvest.jpg" alt="Before Sustainable Harvest" class="img-fluid rounded mb-3">
+          <img src="after-sustainable-harvest.jpg" alt="After Sustainable Harvest" class="img-fluid rounded">
         </div>
-        <h2>Bambussa Vulgaris Vitata (Yellow)</h2>
-        <ul>
-          <li><strong>Length:</strong> 6 meters</li>
-          <li><strong>Diameter:</strong> 80 – 120mm</li>
-          <li><strong>Untreated Price:</strong> 14,000 UGX</li>
-        </ul>
-      </div>
-      <div class="bamboo-item">
-        <div class="bamboo-images">
-          <img src="./assets/images/lush-bamboo-grove-stockcake.jpg" alt="Bamboo 1 - Front View">
-          <img src="./assets/images/lush-bamboo-grove-stockcake.jpg" alt="Bamboo 1 - Close-Up">
-        </div>
-        <h2>Bambussa Vulgaris Vitata (Yellow)</h2>
-        <ul>
-          <li><strong>Length:</strong> 6 meters</li>
-          <li><strong>Diameter:</strong> 80 – 120mm</li>
-          <li><strong>Untreated Price:</strong> 14,000 UGX</li>
-        </ul>
       </div>
 
-      <div class="bamboo-item">
-        <div class="bamboo-images">
-          <img src="./assets/images/lush-bamboo-grove-stockcake.jpg" alt="Bamboo 2 - Front View">
-          <img src="./assets/images/lush-bamboo-grove-stockcake.jpg" alt="Bamboo 2 - Close-Up">
-        </div>
-        <h2>Bambussa Vulgaris Vulgaris (Green)</h2>
-        <ul>
-          <li><strong>Length:</strong> 6 meters</li>
-          <li><strong>Diameter:</strong> 55 – 75mm</li>
-          <li><strong>Untreated Price:</strong> 8,500 UGX</li>
-        </ul>
-      </div>
-
-      <!-- Repeat for other bamboo items -->
-    </div>
-
-    <div class="bamboo-notes">
-      <h3>Additional Notes</h3>
-      <p><strong>Variations:</strong> Bamboo is a natural material, so there may be slight variations in the diameter of
-        the poles.</p>
-      <p><strong>Custom Lengths:</strong> Standard lengths are based on average poles (4 meters). However, custom
-        lengths can be provided upon request. Share your specifications, and we’ll ensure you receive the dimensions
-        needed for your project.</p>
-    </div>
-  </section>
-
-  <section id="quality-standards">
-    <h1>Strips and Splits</h1>
-    <div class="product-grid">
-      <!-- Product 1 -->
-      <div class="product">
-        <div class="image-container">
-          <img src="./assets/images/lush-bamboo-grove-stockcake.jpg" alt="Strips and Splits" />
-        </div>
-        <h3>Strips and Splits</h3>
-        <p>Details:</p>
-        <ul>
-          <li><strong>Strip:</strong> Length 1m, Width 18mm, Price 1,850 UGX</li>
-          <li><strong>Split:</strong> Length 5m, Width 30mm, Price 3,000 UGX</li>
-        </ul>
-      </div>
-
-      <!-- Product 2 -->
-      <div class="product">
-        <div class="image-container">
-          <img src="./assets/images/lush-bamboo-grove-stockcake.jpg" alt="Bamboo Fencing" />
-        </div>
-        <h3>Bamboo Fencing</h3>
-        <p>Customized fencing solutions:</p>
-        <ul>
-          <li><strong>Lightweight BVG Strip Panel:</strong> 180cm x 90cm, Price 35,000 UGX/sq.m</li>
-          <li><strong>Strong BVG Pole Panel:</strong> 180cm x 90cm, Price 60,000 UGX/sq.m</li>
-        </ul>
-      </div>
-
-      <!-- Product 3 -->
-      <div class="product">
-        <div class="image-container">
-          <img src="./assets/images/lush-bamboo-grove-stockcake.jpg" alt="Biochar" />
-        </div>
-        <h3>Biochar</h3>
-        <p>Carbon-rich material for soil improvement and other uses.</p>
-        <p><strong>Price:</strong> <span class="price">750,000 UGX per ton</span></p>
+      <!-- Treatment -->
+      <div class="mt-4">
+        <h5>Treatment</h5>
+        <p>The bamboo undergoes a meticulous treatment process to enhance its longevity. We treat each pole using a 10%
+          solution of boron salts, a safe preservative with limited impact on the environment, to protect against pests,
+          fungi, and decay. This treatment is applied through either dipping or vertical soak diffusion methods,
+          ensuring thorough penetration of the preservative into the bamboo fibers. This process not only safeguards the
+          structural integrity of the bamboo but also preserves its natural beauty, providing a high-quality,
+          long-lasting product that meets the highest standards of excellence.</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <form action="submit-form.php" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Submit</button>
-    </form>
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:info@amabanda.com">info@amabanda.com</a></p>
-    <p>Phone: +256 (0)760207450, +256 (0)709751958</p>
-    <p>Website: <a href="http://www.amabanda.com" target="_blank">www.amabanda.com</a></p>
-  </section>
 
-  <!-- FAQ Section -->
-  <section id="faq" class="faq">
-    <h2>Frequently Asked Questions</h2>
-    <div>
-      <h3>Is bamboo a tree?</h3>
-      <p>No, bamboo is a type of grass despite its woody appearance.</p>
-    </div>
-    <div>
-      <h3>Can bamboo last long?</h3>
-      <p>Yes, with proper treatment, bamboo can last up to 50 years or more.</p>
+
+
+
+
+
+
+
+  <!-- Hero Section -->
+  <section class="bg-light py-5 text-center">
+    <div class="container">
+      <h1 class="display-4">Product Catalogue</h1>
+      <p class="lead">Explore our wide range of products at unbeatable prices!</p>
+      <a href="#catalog" class="btn btn-primary">Shop Now</a>
     </div>
   </section>
 
-  <div class="whatsapp-button">
-    <a href="https://wa.me/256760447637" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    </a>
-  </div>
+  <!-- Bamboo Poles Pricing Section -->
+  <section id="bamboo-poles" class="py-5">
+    <div class="container">
+      <h2 class="mb-4">1. Bamboo Poles</h2>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Amabanda Uganda Ltd. | All Rights Reserved.</p>
-  </footer>
+      <!-- Bamboo Poles Table -->
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Image</th>
+              <th>Price (UGX)</th>
+              <th>Length</th>
+              <th>Diameter</th>
+              <th>Untreated Price (UGX)</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bambussa Vulgaris Vitata (Yellow)</td>
+              <td><img src="/assets/images/lush-bamboo-grove-stockcake.jpg" alt="Bambussa Vulgaris Vitata"
+                  class="img-fluid" style="width: 100px;">
+              </td>
+              <td>25,000 UGX</td>
+              <td>6 meters</td>
+              <td>80 – 120 mm</td>
+              <td>14,000 UGX</td>
+              <td><button class="btn btn-primary">Buy Now</button></td>
+            </tr>
+            <tr>
+              <td>Bambussa Vulgaris Vulgaris (Green)</td>
+              <td><img src="/assets/images/lush-bamboo-grove-stockcake.jpg" alt="Bambussa Vulgaris Vulgaris"
+                  class="img-fluid" style="width: 100px;"></td>
+              <td>17,500 UGX</td>
+              <td>6 meters</td>
+              <td>55 – 75 mm</td>
+              <td>8,500 UGX</td>
+              <td><button class="btn btn-primary">Buy Now</button></td>
+            </tr>
+            <tr>
+              <td>Dendrocalamus Asper</td>
+              <td><img src="/assets/images/lush-bamboo-grove-stockcake.jpg" alt="Dendrocalamus Asper" class="img-fluid"
+                  style="width: 100px;"></td>
+              <td>Price upon request</td>
+              <td>7 meters</td>
+              <td>60 – 80 mm</td>
+              <td>9,500 UGX</td>
+              <td><button class="btn btn-primary">Buy Now</button></td>
+            </tr>
+            <tr>
+              <td>Dendrocalamus Giganteous</td>
+              <td><img src="/assets/images/lush-bamboo-grove-stockcake.jpg" alt="Dendrocalamus Giganteous"
+                  class="img-fluid" style="width: 100px;">
+              </td>
+              <td>110,000 UGX</td>
+              <td>9 meters</td>
+              <td>180 – 240 mm</td>
+              <td>65,000 UGX</td>
+              <td><button class="btn btn-primary">Buy Now</button></td>
+            </tr>
+            <tr>
+              <td>Phyllostachys Aurea</td>
+              <td><img src="/assets/images/lush-bamboo-grove-stockcake.jpg" alt="Phyllostachys Aurea" class="img-fluid"
+                  style="width: 100px;"></td>
+              <td>7,500 UGX</td>
+              <td>4 meters</td>
+              <td>30 – 40 mm</td>
+              <td>7,500 UGX</td>
+              <td><button class="btn btn-primary">Buy Now</button></td>
+            </tr>
+            <tr>
+              <td>Oxytenanthera Abyssinica</td>
+              <td><img src="/assets/images/lush-bamboo-grove-stockcake.jpg" alt="Oxytenanthera Abyssinica"
+                  class="img-fluid" style="width: 100px;">
+              </td>
+              <td>10,500 UGX</td>
+              <td>4 meters</td>
+              <td>30 – 40 mm</td>
+              <td>7,500 UGX</td>
+              <td><button class="btn btn-primary">Buy Now</button></td>
+            </tr>
+            <tr>
+              <td>Dendrocalamus Strictus</td>
+              <td><img src="/assets/images/lush-bamboo-grove-stockcake.jpg" alt="Dendrocalamus Strictus"
+                  class="img-fluid" style="width: 100px;">
+              </td>
+              <td>11,000 UGX</td>
+              <td>4 meters</td>
+              <td>30 – 40 mm</td>
+              <td>7,500 UGX</td>
+              <td><button class="btn btn-primary">Buy Now</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-  <!-- Scripts -->
+      <!-- Notes on Bamboo Poles -->
+      <div class="mt-4">
+        <h5>Notes:</h5>
+        <ul>
+          <li>As bamboo is a natural material, not every pole is exactly the same, and there might be variations in the
+            diameter of the poles.</li>
+          <li>Standard lengths are based on average poles. However, custom lengths based on special client requests can
+            be provided. Let us know your specifications, and we’ll ensure you receive the exact dimensions needed for
+            your project.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-  <script>
-    // Smooth scrolling for all navigation links
-    document.querySelectorAll('nav a').forEach(link => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault(); // Prevent the default jump to the link
+  <!-- Strips & Splits Section -->
+  <section id="strips-splits" class="py-5">
+    <div class="container">
+      <h2 class="mb-4">Strips & Splits</h2>
 
-        const targetId = this.getAttribute('href').substring(1); // Get the target section ID
-        const targetSection = document.getElementById(targetId);
+      <!-- Strips & Splits Details -->
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Bamboo Splits</h4>
+          <p>Length: 5 m | Thickness: 10 mm | Width: 30 mm</p>
+          <p>Price: 3,000 UGX per split</p>
+          <!-- Image Placeholder -->
+          <img src="/assets/images/lush-bamboo-grove-stockcake.jpg" alt="Bamboo Splits" class="img-fluid">
+          <div class="text-center mt-3">
+            <a href="contact_us.html" class="btn btn-primary">Buy Bamboo Splits</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h4>Bamboo Strips</h4>
+          <p>Length: 1 m | Thickness: 8 mm | Width: 18 mm</p>
+          <p>Price: 1,850 UGX per strip</p>
+          <!-- Image Placeholder -->
+          <img src="/assets/images/lush-bamboo-grove-stockcake.jpg" alt="Bamboo Strips" class="img-fluid">
+          <div class="text-center mt-3">
+            <a href="contact_us.html" class="btn btn-primary">Buy Bamboo Strips</a>
+          </div>
+        </div>
+      </div>
 
-        if (targetSection) {
-          targetSection.scrollIntoView({
-            behavior: 'smooth', // Smooth scrolling
-            block: 'start', // Scroll to the start of the section
-          });
-        }
-      });
-    });
-  </script>
+      <!-- Description -->
+      <p>Strips and splits are the basic building blocks widely used in construction and manufacturing. Bamboo splits
+        are naturally curved sections of bamboo, made by splitting the pole vertically into different segments. Strips
+        are created by sawing and sanding splits. Both retain the strength and flexibility of bamboo, offering versatile
+        and sustainable options.</p>
 
-  <script>
-    // Scroll Spy Functionality
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("nav a");
+      <div class="text-center">
+        <a href="contact_us.html" class="btn btn-primary">Buy Strips and Splits</a>
+        <p>Or share your needs and we will design and make it for you.</p>
+      </div>
+    </div>
+  </section>
 
-    window.addEventListener("scroll", () => {
-      let currentSection = "";
-      // Determine the current section in view
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 70; // Adjust for fixed header
-        const sectionHeight = section.offsetHeight;
+  <!-- Bamboo Fencing Section -->
+  <section id="bamboo-fencing" class="py-5">
+    <div class="container">
+      <h2 class="mb-4">Bamboo Fencing</h2>
 
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-          currentSection = section.getAttribute("id");
-        }
-      });
-      // Update the active class on navigation links
-      navLinks.forEach((link) => {
-        link.classList.remove("active");
-        if (link.getAttribute("href").substring(1) === currentSection) {
-          link.classList.add("active");
-        }
-      });
-    });
+      <!-- Fencing Panels Table -->
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Size</th>
+              <th>Thickness</th>
+              <th>Price (UGX)</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>BVG Strip Panel</td>
+              <td>180 cm x 90 cm</td>
+              <td>1.5 cm</td>
+              <td>35,000 UGX sq/m</td>
+              <td><img src="/assets/images/lush-bamboo-grove-stockcake.jpg" alt="BVG Strip Panel" class="img-fluid">
+              </td>
+            </tr>
+            <tr>
+              <td>PA Pole Panel</td>
+              <td>180 cm x 90 cm</td>
+              <td>3 cm</td>
+              <td>80,000 UGX sq/m</td>
+              <td><img src="/assets/images/lush-bamboo-grove-stockcake.jpg" alt="PA Pole Panel" class="img-fluid"></td>
+            </tr>
+            <tr>
+              <td>BVG Open Wall</td>
+              <td>180 cm x 90 cm</td>
+              <td>6 cm</td>
+              <td>60,000 UGX sq/m</td>
+              <td><img src="/assets/images/lush-bamboo-grove-stockcake.jpg" alt="BVG Open Wall" class="img-fluid"></td>
+            </tr>
+            <tr>
+              <td>BVG Pole Panel</td>
+              <td>180 cm x 90 cm</td>
+              <td>7 cm</td>
+              <td>60,000 UGX sq/m</td>
+              <td><img src="/assets/images/lush-bamboo-grove-stockcake.jpg" alt="BVG Pole Panel" class="img-fluid"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-    // Change Navigation Background on Scroll
-    const nav = document.querySelector("nav");
+      <!-- Custom Fencing Solutions -->
+      <h5>Customized Bamboo Fencing Solutions</h5>
+      <p>We offer a range of customized bamboo fencing solutions to suit your specific needs, whether for functional or
+        decorative purposes. Our bamboo poles can be tailored to support wired mesh, barbed wire, or fully enclosed
+        fencing for added security, as well as beautifully crafted decorative fencing for aesthetic appeal.</p>
 
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 50) {
-        nav.classList.add("scrolled");
-      } else {
-        nav.classList.remove("scrolled");
-      }
-    });
-  </script>
+      <div class="text-center">
+        <a href="contact_us.html" class="btn btn-primary">Request a Quote</a>
+      </div>
+    </div>
+  </section>
 
-  <script>
-    window.addEventListener('load', () => {
-      const loader = document.getElementById('loader');
-      loader.style.display = 'none';
-    });
-  </script>
+  <!-- Laminated Timber Section -->
+  <section id="laminated-timber" class="py-5">
+    <div class="container">
+      <h2 class="mb-4">Laminated Bamboo Timber</h2>
+      <p>Laminated bamboo timber is a high-performance material engineered by pressing and gluing bamboo strips into
+        solid, durable planks. It offers greater dimensional stability and resistance to warping compared to traditional
+        wood, making it ideal for modern construction projects.</p>
 
-  <script>
-    // Get the button element
-    const scrollToTopButton = document.getElementById("scrollToTop");
+      <h5>Price: 400,000 UGX sq/m</h5>
+      <p>Please contact us for specific quotes tailored to your needs.</p>
 
-    // Show or hide the button when scrolling
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        scrollToTopButton.style.display = "block";
-      } else {
-        scrollToTopButton.style.display = "none";
-      }
-    });
+      <!-- Image Placeholder -->
+      <img src="/assets/images/lush-bamboo-grove-stockcake.jpg" alt="Laminated Bamboo Timber" class="img-fluid">
 
-    // Scroll to the top when the button is clicked
-    scrollToTopButton.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-    });
-  </script>
+      <div class="text-center mt-3">
+        <a href="contact_us.html" class="btn btn-primary">Request a Quote</a>
+      </div>
+    </div>
+  </section>
 
-  <!-- Scroll to Top Button -->
-  <button id="scrollToTop" title="Go to top">↑</button>
+  <!-- Bamboo Roofs Section -->
+  <section id="bamboo-roofs" class="py-5">
+    <div class="container">
+      <h2 class="mb-4">Bamboo Roofs</h2>
 
+      <h5>Roof Types & Prices</h5>
+      <ul>
+        <li>Interlocking Halved Bamboo: 100,000 UGX sq/m (Including installation)</li>
+        <li>Bamboo Shingles: 150,000 UGX sq/m (Including installation)</li>
+        <li>Flattened Bamboo Pelupuh: 135,000 UGX sq/m (Including installation)</li>
+      </ul>
+
+      <!-- Image Placeholder for All Roof Types -->
+      <div class="row">
+        <div class="col-md-4">
+          <img src="/assets/images/lush-bamboo-grove-stockcake.jpg" alt="Interlocking Halved Bamboo Roof"
+            class="img-fluid">
+          <p>Interlocking Halved Bamboo Roof</p>
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/lush-bamboo-grove-stockcake.jpg" alt="Bamboo Shingles Roof" class="img-fluid">
+          <p>Bamboo Shingles Roof</p>
+        </div>
+        <div class="col-md-4">
+          <img src="/assets/images/lush-bamboo-grove-stockcake.jpg" alt="Flattened Bamboo Pelupuh Roof"
+            class="img-fluid">
+          <p>Flattened Bamboo Pelupuh Roof</p>
+        </div>
+      </div>
+
+      <p>Bamboo roofs offer a sustainable and eco-friendly alternative to traditional roofing materials. With proper
+        treatment, bamboo roofing can withstand harsh weather while providing excellent insulation against heat.</p>
+
+      <div class="text-center">
+        <a href="contact_us.html" class="btn btn-primary">Request a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Biochar Section -->
+  <section id="biochar" class="py-5">
+    <div class="container">
+      <h2 class="mb-4">Bamboo Biochar</h2>
+
+      <p>Biochar is a carbon-rich product created by heating bamboo in a low-oxygen environment. It's eco-friendly and
+        has numerous applications, including improving soil fertility and mitigating climate change.</p>
+
+      <h5>Price: 750,000 UGX per ton</h5>
+      <p>Amabanda Uganda Ltd. is in the process of acquiring certified carbon credits for returning the carbon stored in
+        the bamboo permanently back into the soil.</p>
+
+      <div class="text-center">
+        <a href="contact_us.html" class="btn btn-primary">Buy Bamboo Biochar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Innovative Solutions Section -->
+  <section id="innovative-solutions" class="py-5">
+    <div class="container">
+      <h2 class="mb-4">Innovative Bamboo Solutions</h2>
+
+      <p>At Amabanda Uganda Ltd., we offer unique bamboo solutions for various applications. Some of our recent
+        innovations include bamboo pit latrines, bamboo drainage gutter systems, and more. Bamboo is a versatile,
+        affordable, and eco-friendly material that
+
+
+        <!-- Contact Section -->
+      <section id="contact" class="py-5 bg-light">
+        <div class="container">
+          <h2 class="text-center mb-4">Contact Us</h2>
+          <form>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Your Name" required>
+              </div>
+              <div class="col-md-6">
+                <input type="email" class="form-control" placeholder="Your Email" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+
+      <!-- Products Section -->
+      <!-- <section id="products" class="py-5 bg-light">
+    <div class="container">
+      <h1 class="text-center">Product Catalogue</h1>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="./assets/images/lush-bamboo-grove-stockcake.jpg" class="card-img-top" alt="Bamboo 1">
+            <div class="card-body">
+              <h5 class="card-title">Bambussa Vulgaris Vitata (Yellow)</h5>
+              <ul>
+                <li><strong>Length:</strong> 6 meters</li>
+                <li><strong>Diameter:</strong> 80–120mm</li>
+                <li><strong>Untreated Price:</strong> 14,000 UGX</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="./assets/images/lush-bamboo-grove-stockcake.jpg" class="card-img-top" alt="Bamboo 2">
+            <div class="card-body">
+              <h5 class="card-title">Bambussa Vulgaris Vulgaris (Green)</h5>
+              <ul>
+                <li><strong>Length:</strong> 6 meters</li>
+                <li><strong>Diameter:</strong> 55–75mm</li>
+                <li><strong>Untreated Price:</strong> 8,500 UGX</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        Add more products as needed 
+      </div>
+    </div>
+  </section> -->
+
+      <!-- FAQ Section -->
+      <section id="faq" class="py-5">
+        <div class="container">
+          <h1 class="text-center">Frequently Asked Questions</h1>
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
+                  aria-expanded="true" aria-controls="collapse1">
+                  1. What is bamboo? Is it a tree?
+                </button>
+              </h2>
+              <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  No, bamboo is not a tree! Despite its woody appearance, bamboo is actually a type of grass. It’s one
+                  of
+                  the fastest-growing plants in the world.
+                </div>
+              </div>
+            </div>
+            <!-- Add more FAQs as needed -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-5 bg-light">
+        <div class="container">
+          <h1 class="text-center">Contact Us</h1>
+          <form action="submit-form.php" method="POST" class="row g-3">
+            <div class="col-md-6">
+              <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="col-md-6">
+              <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="col-12">
+              <textarea name="message" class="form-control" placeholder="Your Message" rows="4" required></textarea>
+            </div>
+            <div class="col-12 text-center">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+          <p class="text-center mt-4">Email: <a href="mailto:info@amabanda.com">info@amabanda.com</a></p>
+          <p class="text-center">Phone: +256 (0)760207450, +256 (0)709751958</p>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="text-center py-3 bg-dark text-light">
+        <p>&copy; 2024 Amabanda Uganda Ltd. | All Rights Reserved.</p>
+      </footer>
+
+      <!-- Bootstrap Scripts -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
