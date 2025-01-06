@@ -59,7 +59,34 @@ h2 {
     transition: max-height 0.5s ease-in-out;
 }
 
+/* Fullscreen navbar on small devices */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
 
+    .navbar-nav {
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 1rem;
+    }
+
+    .navbar-toggler-icon {
+        background-color: #fff;
+    }
+}
 
 /* Header */
 header {
@@ -89,67 +116,6 @@ header p {
     max-width: 600px;
     line-height: 1.8;
 }
-
-/* Navigation Bar */
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 12px 0;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    background-color: transparent;
-}
-
-nav.scrolled {
-    background: #075200;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-nav a {
-    margin: 0 15px;
-    color: #970000;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-nav a.active {
-    color: #00ff08;
-    border-bottom: 2px solid #00ff0d;
-}
-
-nav a:hover {
-    color: #78ff7f;
-    transform: scale(1.2);
-}
-
-/* Smooth transition for collapsing the navbar */
-.navbar-collapse {
-    transition: all 0.3s ease-in-out;
-}
-
-/* Mobile Navigation (Fixed to Bottom) */
-@media (max-width: 768px) {
-    nav {
-        position: fixed;
-        bottom: 0;
-        flex-direction: row;
-        background: #075200;
-        padding: 10px 0;
-    }
-
-    nav a {
-        margin: 0 10px;
-        font-size: 0.9rem;
-    }
-}
-
 /* Section Styling */
 section {
     padding-top: 60px !important;
