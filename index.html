@@ -14,14 +14,22 @@
   <title>Amabanda Uganda Ltd. Catalogue</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="style/styles.css"> -->
 
-  <head>
-    <!-- Add Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Your custom CSS -->
-    <link rel="stylesheet" href="style/styles.css">
-  </head>
+
+  <!-- Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <!-- Add Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="style/styles.css">
+
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- Font Awesome for social icons (optional) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -58,15 +66,33 @@
     <p>Maximizing economic, social, and environmental impact through innovative bamboo solutions.</p>
   </header>
 
-  <!-- About Us Section -->
-  <section id="about" class="py-5">
+  <!-- Social Icons Stack -->
+  <div class="social-icons">
+    <a href="https://facebook.com" target="_blank" class="social-icon">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://twitter.com" target="_blank" class="social-icon">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://instagram.com" target="_blank" class="social-icon">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://linkedin.com" target="_blank" class="social-icon">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+  </div>
+
+  <!-- Animated Section -->
+  <section id="about" class="py-5 " data-aos="fade-up">
     <div class="container">
-      <h1 class="text-center">About Us</h1>
-      <p class="lead text-center">
+      <br>
+      <br>
+      <h1 class="text-center sectionHeader" data-aos="fade-right ">About Us</h1>
+      <p class="lead text-center" data-aos="fade-left">
         At Amabanda Uganda Ltd., we are dedicated to creating sustainable solutions that harness the unique capabilities
         of bamboo.
       </p>
-      <p>
+      <p data-aos="fade-up" class="animate__animated animate__fadeIn animate__delay-2s">
         Our commitment lies in transforming sustainably harvested bamboo into long-lasting construction materials,
         biochar, and other eco-friendly products.
       </p>
@@ -74,10 +100,11 @@
   </section>
 
 
+
   <!-- Quality Standards Section -->
-  <section id="standards" class="py-5 bg-light">
+  <section id="standards" class="py-5  bg-light">
     <div class="container">
-      <h2 class="mb-4">Our Quality Standards</h2>
+      <h2 class="mb-4 sectionHeader">Our Quality Standards</h2>
 
       <!-- Sustainable Harvesting -->
       <div class="row">
@@ -91,8 +118,10 @@
             bamboo is not only durable and resilient but also environmentally sustainable.</p>
         </div>
         <div class="col-md-6">
-          <img src="before-sustainable-harvest.jpg" alt="Before Sustainable Harvest" class="img-fluid rounded mb-3">
-          <img src="after-sustainable-harvest.jpg" alt="After Sustainable Harvest" class="img-fluid rounded">
+          <img src="/assets/images/lush-bamboo-grove-stockcake.jpg" alt="Before Sustainable Harvest"
+            class="img-fluid rounded mb-3">
+          <img src="/assets/images/lush-bamboo-grove-stockcake.jpg" alt="After Sustainable Harvest"
+            class="img-fluid rounded">
         </div>
       </div>
 
@@ -111,16 +140,11 @@
 
 
 
-
-
-
-
-
-
   <!-- Hero Section -->
-  <section class="bg-light py-5 text-center">
+  <section id="products" class="bg-light py-5 productcatalogue text-center">
     <div class="container">
-      <h1 class="display-4">Product Catalogue</h1>
+      <br><br>
+      <h1 class="display-4 sectionHeader">Product Catalogue</h1>
       <p class="lead">Explore our wide range of products at unbeatable prices!</p>
       <a href="#catalog" class="btn btn-primary">Shop Now</a>
     </div>
@@ -129,7 +153,7 @@
   <!-- Bamboo Poles Pricing Section -->
   <section id="bamboo-poles" class="py-5">
     <div class="container">
-      <h2 class="mb-4">1. Bamboo Poles</h2>
+      <h2 class="mb-4 products">1. Bamboo Poles</h2>
 
       <!-- Bamboo Poles Table -->
       <div class="table-responsive">
@@ -241,7 +265,7 @@
   <!-- Strips & Splits Section -->
   <section id="strips-splits" class="py-5">
     <div class="container">
-      <h2 class="mb-4">Strips & Splits</h2>
+      <h2 class="mb-4 products">2. Strips & Splits</h2>
 
       <!-- Strips & Splits Details -->
       <div class="row">
@@ -283,7 +307,7 @@
   <!-- Bamboo Fencing Section -->
   <section id="bamboo-fencing" class="py-5">
     <div class="container">
-      <h2 class="mb-4">Bamboo Fencing</h2>
+      <h2 class="mb-4 products">3. Bamboo Fencing</h2>
 
       <!-- Fencing Panels Table -->
       <div class="table-responsive">
@@ -346,7 +370,7 @@
   <!-- Laminated Timber Section -->
   <section id="laminated-timber" class="py-5">
     <div class="container">
-      <h2 class="mb-4">Laminated Bamboo Timber</h2>
+      <h2 class="mb-4 products">4. Laminated Bamboo Timber</h2>
       <p>Laminated bamboo timber is a high-performance material engineered by pressing and gluing bamboo strips into
         solid, durable planks. It offers greater dimensional stability and resistance to warping compared to traditional
         wood, making it ideal for modern construction projects.</p>
@@ -366,7 +390,7 @@
   <!-- Bamboo Roofs Section -->
   <section id="bamboo-roofs" class="py-5">
     <div class="container">
-      <h2 class="mb-4">Bamboo Roofs</h2>
+      <h2 class="mb-4">5. Bamboo Roofs</h2>
 
       <h5>Roof Types & Prices</h5>
       <ul>
@@ -405,7 +429,7 @@
   <!-- Biochar Section -->
   <section id="biochar" class="py-5">
     <div class="container">
-      <h2 class="mb-4">Bamboo Biochar</h2>
+      <h2 class="mb-4 products">6. Bamboo Biochar</h2>
 
       <p>Biochar is a carbon-rich product created by heating bamboo in a low-oxygen environment. It's eco-friendly and
         has numerous applications, including improving soil fertility and mitigating climate change.</p>
@@ -430,72 +454,15 @@
         affordable, and eco-friendly material that
 
 
-        <!-- Contact Section -->
-      <section id="contact" class="py-5 bg-light">
-        <div class="container">
-          <h2 class="text-center mb-4">Contact Us</h2>
-          <form>
-            <div class="row mb-3">
-              <div class="col-md-6">
-                <input type="text" class="form-control" placeholder="Your Name" required>
-              </div>
-              <div class="col-md-6">
-                <input type="email" class="form-control" placeholder="Your Email" required>
-              </div>
-            </div>
-            <div class="mb-3">
-              <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
-            </div>
-            <div class="text-center">
-              <button type="submit" class="btn btn-primary">Send Message</button>
-            </div>
-          </form>
-        </div>
-      </section>
 
-
-      <!-- Products Section -->
-      <!-- <section id="products" class="py-5 bg-light">
-    <div class="container">
-      <h1 class="text-center">Product Catalogue</h1>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card">
-            <img src="./assets/images/lush-bamboo-grove-stockcake.jpg" class="card-img-top" alt="Bamboo 1">
-            <div class="card-body">
-              <h5 class="card-title">Bambussa Vulgaris Vitata (Yellow)</h5>
-              <ul>
-                <li><strong>Length:</strong> 6 meters</li>
-                <li><strong>Diameter:</strong> 80–120mm</li>
-                <li><strong>Untreated Price:</strong> 14,000 UGX</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="./assets/images/lush-bamboo-grove-stockcake.jpg" class="card-img-top" alt="Bamboo 2">
-            <div class="card-body">
-              <h5 class="card-title">Bambussa Vulgaris Vulgaris (Green)</h5>
-              <ul>
-                <li><strong>Length:</strong> 6 meters</li>
-                <li><strong>Diameter:</strong> 55–75mm</li>
-                <li><strong>Untreated Price:</strong> 8,500 UGX</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        Add more products as needed 
-      </div>
-    </div>
-  </section> -->
-
-      <!-- FAQ Section -->
+        <!-- FAQ Section -->
       <section id="faq" class="py-5">
-        <div class="container">
-          <h1 class="text-center">Frequently Asked Questions</h1>
+        <div class="container" data-aos="fade-up">
+          <br><br>
+          <h1 class="text-center" data-aos="fade-left">Frequently Asked Questions</h1>
           <div class="accordion" id="faqAccordion">
-            <div class="accordion-item">
+
+            <div class="accordion-item" data-aos="flip-left">
               <h2 class="accordion-header" id="faq1">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
                   aria-expanded="true" aria-controls="collapse1">
@@ -505,21 +472,144 @@
               <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1"
                 data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  No, bamboo is not a tree! Despite its woody appearance, bamboo is actually a type of grass. It’s one
-                  of
-                  the fastest-growing plants in the world.
+                  No, bamboo is actually a type of grass, not a tree. Despite its woody appearance, bamboo belongs to
+                  the grass family and is one of the fastest-growing plants in the world. Its rapid growth and ability
+                  to regenerate after harvesting are key reasons why bamboo is considered such a sustainable resource
+                  for construction and other uses.
                 </div>
               </div>
             </div>
-            <!-- Add more FAQs as needed -->
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq2">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2"
+                  aria-expanded="false" aria-controls="collapse2">
+                  2. Can I use nails in bamboo?
+                </button>
+              </h2>
+              <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  No, using nails in bamboo is not recommended. As bamboo is a dense material, nails may cause cracks.
+                  With bamboo, it is recommended to always pre-drill holes and use bamboo dowels, bolts and nuts, or
+                  screws, as they provide a more secure and durable connection, especially for structural applications.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq3">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3"
+                  aria-expanded="false" aria-controls="collapse3">
+                  3. How durable is bamboo?
+                </button>
+              </h2>
+              <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Without any protective treatment, most bamboo species have an average natural lifespan of less than 2
+                  years. Stored under cover, untreated bamboo may last 4-7 years. These variations in bamboo durability
+                  strongly depend on the species, the length of the culm, the thickness of the wall, and the time of
+                  harvesting. That said, with proper harvesting practice and boron salt treatment, the shelf-life and
+                  durability of bamboo can extend up to 50 years or more.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq4">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4"
+                  aria-expanded="false" aria-controls="collapse4">
+                  4. Can bamboo really grow a meter in a day?
+                </button>
+              </h2>
+              <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes, some species of bamboo can grow up to a meter (around 3 feet) in just one day under ideal
+                  conditions! This incredible growth rate makes bamboo one of the fastest-growing plants on Earth,
+                  contributing to its sustainability as a rapidly renewable resource.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq5">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5"
+                  aria-expanded="false" aria-controls="collapse5">
+                  5. Is bamboo stronger than steel?
+                </button>
+              </h2>
+              <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="faq5"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  While it may sound surprising, bamboo actually has a higher tensile strength than steel, meaning it
+                  can withstand more tension before breaking. This makes bamboo a strong, reliable material for
+                  construction, offering durability with a fraction of the weight.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq6">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6"
+                  aria-expanded="false" aria-controls="collapse6">
+                  6. Does bamboo require a lot of water to grow?
+                </button>
+              </h2>
+              <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="faq6"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Bamboo is a hardy plant that doesn’t require excessive water to thrive. In fact, it grows well in a
+                  variety of climates and soil types, often needing less water than many other crops or trees, which
+                  makes it a sustainable choice for eco-friendly projects.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq7">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7"
+                  aria-expanded="false" aria-controls="collapse7">
+                  7. Can bamboo be used for high-tech applications?
+                </button>
+              </h2>
+              <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="faq7"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes, bamboo is increasingly being used in high-tech applications! From bio-composites in automotive
+                  parts to sustainable textiles and even biodegradable plastics, bamboo is proving to be a versatile
+                  material in innovative, cutting-edge industries.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq8">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8"
+                  aria-expanded="false" aria-controls="collapse8">
+                  8. Can bamboo help prevent soil erosion?
+                </button>
+              </h2>
+              <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="faq8"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes, bamboo’s dense root system helps stabilize the soil and prevent erosion. It is commonly planted
+                  in areas prone to landslides or flooding, as its roots help hold the soil in place while its rapid
+                  growth creates natural barriers.
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
       <!-- Contact Section -->
-      <section id="contact" class="py-5 bg-light">
+      <section id="contact" class="py-5  bg-light">
         <div class="container">
-          <h1 class="text-center">Contact Us</h1>
+          <br><br>
+          <h1 class="text-center sectionHeader">Contact Us</h1>
           <form action="submit-form.php" method="POST" class="row g-3">
             <div class="col-md-6">
               <input type="text" class="form-control" name="name" placeholder="Your Name" required>
@@ -571,6 +661,14 @@
       <!-- Bootstrap Scripts -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+      <script>
+        AOS.init({
+          duration: 1000, // animation duration
+          easing: 'ease-in-out', // animation easing function
+          once: true, // animation only happens once
+        });
+      </script>
 </body>
 
 </html>
