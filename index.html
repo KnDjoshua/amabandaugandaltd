@@ -685,12 +685,13 @@
         });
       </script>
       <script>
-        // Close the navbar when a link is clicked on small screens
+        // Close the navbar when a link is clicked
         document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
           link.addEventListener('click', () => {
             const navbarCollapse = document.querySelector('.navbar-collapse');
             const navbarToggler = document.querySelector('.navbar-toggler');
-            // Check if the navbar is collapsed, then toggle it
+
+            // Close the navbar if it is open
             if (navbarCollapse.classList.contains('show')) {
               navbarToggler.click();
             }
