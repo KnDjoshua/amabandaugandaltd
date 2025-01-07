@@ -46,7 +46,8 @@ h2 {
 h4 {
     color: #2e7d32;
 }
-.titleP{
+
+.titleP {
     color: #2e7d32;
 }
 
@@ -200,7 +201,7 @@ section .sectionHeader {
 /* Social Icons */
 .social-icons {
     position: fixed;
-    left: 20px;
+    left: 1px;
     bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -218,7 +219,7 @@ section .sectionHeader {
 }
 
 
-#contact{
+#contact {
     background-image: url(/style/map-marked-with-pins-phone.jpg);
     background-size: contain;
     background-attachment: fixed;
