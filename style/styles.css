@@ -218,6 +218,12 @@ section .sectionHeader {
 }
 
 
+#contact{
+    background-image: url(/style/map-marked-with-pins-phone.jpg);
+    background-size: contain;
+    background-attachment: fixed;
+}
+
 
 /* Scroll-to-Top Button */
 #scrollToTop {
