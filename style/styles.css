@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 
 .container {
-    background-color: rgb(251, 251, 251);
-    padding: 10px 10px 10px 10px;
+    background-color: rgb(249, 249, 249);
+    padding: 20px 20px 20px 20px;
 }
 
 /* Styling for the WhatsApp button container */
@@ -279,7 +279,7 @@ header p {
 /* Section Styling */
 section {
     padding-top: 60px !important;
-    padding: 50px 30px !important;
+    padding: 20px 10px !important;
     max-width: 1100px;
     margin: 80px auto;
     background: #fff;
