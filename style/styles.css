@@ -334,8 +334,8 @@ section .sectionHeader {
 /* Social Icons */
 .social-icons {
     position: fixed;
-    left: -1px;
-    bottom: 45px;
+    left: -3px;
+    bottom: 55px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -344,7 +344,7 @@ section .sectionHeader {
 
 .social-icon {
     color: #256aff;
-    font-size: 25px;
+    font-size: 20px;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 50%;
