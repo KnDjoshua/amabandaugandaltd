@@ -335,7 +335,7 @@ section .sectionHeader {
 .social-icons {
     position: fixed;
     left: -1px;
-    bottom: 20px;
+    bottom: 45px;
     display: flex;
     flex-direction: column;
     align-items: center;
