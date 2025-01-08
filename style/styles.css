@@ -1,25 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
-
-.container {
-    background-color: rgb(249, 249, 249);
-    padding: 20px 20px 20px 20px;
-}
-
-/* Styling for the WhatsApp button container */
-.whatsapp-button {
-    position: fixed;
-    top: 80%;
-    left: 10px;
-    transform: translateY(-50%);
-    z-index: 1000;
-}
-
-/* Image inside the button */
-.whatsapp-button img {
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-}
+@import url('https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css'); /* Import Bootstrap */
 
 /* General Styles */
 body {
@@ -33,97 +13,42 @@ body {
     overflow-x: hidden;
 }
 
+h1, h2, h4, .titleP {
+    color: #2e7d32;
+}
 
 h1 {
-    color: #2e7d32;
-    margin: 20px 0;
     font-size: 2rem;
+    margin: 20px 0;
 }
 
 h2 {
     font-weight: bold;
-    text-align: left;
-    color: #2e7d32;
     font-size: 1.5rem;
     margin-bottom: 15px;
 }
 
-h4 {
-    color: #2e7d32;
+.container {
+    background-color: rgb(249, 249, 249);
+    padding: 20px;
+    max-width: 100%;
 }
 
-.titleP {
-    color: #2e7d32;
+/* WhatsApp Button */
+.whatsapp-button {
+    position: fixed;
+    bottom: 10%;
+    left: 10px;
+    z-index: 1000;
 }
 
-/* Neat Underline Styling */
-.custom-underline {
-    position: relative;
-    display: inline-block;
-    text-decoration: none;
+.whatsapp-button img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
 }
 
-.custom-underline::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -2px;
-    height: 2px;
-    background-color: #2e7d32;
-    /* Custom underline color */
-    transition: transform 0.6s ease-in-out;
-    transform: scaleX(0);
-    /* Hidden by default */
-    transform-origin: left;
-    /* Start animation from left */
-}
-
-.custom-underline:hover::after {
-    transform: scaleX(1);
-    /* Full underline on hover */
-
-
-}
-
-/* Neat Underline Styling */
-.navbarHover {
-    font-weight: bold;
-    position: relative;
-    display: inline-block;
-    text-decoration: none;
-    /* padding-top: 1px; */
-}
-
-.navbarHover::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -2px;
-    height: 2px;
-    background-color: #2e7d32;
-    /* Custom underline color */
-    transition: transform 0.3s ease-in-out;
-    transform: scaleX(0);
-    /* Hidden by default */
-    transform-origin: center;
-    /* Start animation from left */
-}
-
-.navbarHover:hover::after {
-    transform: scaleX(1);
-    /* Full underline on hover */
-}
-
-
-
-
-
-
-
-/* General Styles */
-
+/* Navbar */
 .navbar {
     padding: 10px 20px;
     background-color: #f8f9fa;
@@ -141,110 +66,59 @@ h4 {
     text-decoration: none;
     padding: 10px 15px;
     transition: color 0.3s ease;
-    display: inline-block;
-    /* Inline-block ensures horizontal alignment */
 }
 
 .nav-link:hover {
     color: #007bff;
 }
 
-.menu-btn {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    display: none;
-    /* Hidden by default */
-}
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .normal-nav {
+        display: none;
+    }
 
-.sidebar {
-    position: fixed;
-    top: 0;
-    right: -300px;
-    /* Hidden by default */
-    width: 250px;
-    height: 100%;
-    background-color: #f8f9fa;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-    transition: right 0.3s ease;
-    z-index: 2000;
-    padding: 20px;
-    display: none;
-    /* Hidden by default */
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar .nav-item {
-    margin: 15px 0;
-    text-align: center;
-}
-
-.sidebar.active {
-    right: 0;
-    display: block;
-}
-
-/* Normal navigation for large screens */
-.normal-nav {
-    display: block;
-    text-align: right;
-    /* Align links to the right */
-}
-
-.normal-nav .nav-item {
-    display: inline-block;
-    /* Ensure horizontal alignment */
-    list-style: none;
-    margin-right: 15px;
-    /* Add spacing between links */
-    vertical-align: middle;
-}
-
-/* Responsive styles */
-@media (max-width: 600px) {
     .menu-btn {
         display: block;
-        /* Show menu button on small screens */
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
     }
 
     .sidebar {
         display: block;
-        /* Sidebar becomes functional on small screens */
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100%;
+        background-color: #f8f9fa;
+        padding: 20px;
+        transition: right 0.3s ease;
+        z-index: 2000;
     }
 
-    .normal-nav {
-        display: none;
-        /* Hide normal navigation on small screens */
+    .sidebar.active {
+        right: 0;
+    }
+
+    .sidebar .nav-item {
+        text-align: center;
+        margin: 15px 0;
     }
 }
 
-@media (min-width: 601px) {
-
+@media (min-width: 769px) {
     .menu-btn,
     .sidebar {
         display: none;
-        /* Hide sidebar and menu button on larger screens */
     }
 
     .normal-nav {
         display: block;
-        /* Show normal navigation on larger screens */
     }
 }
-
-
-
-
-
-
-
-
-
 
 /* Header */
 header {
@@ -264,7 +138,6 @@ header {
 }
 
 header h1 {
-    color: rgb(255, 255, 255);
     font-size: 3rem;
     text-transform: uppercase;
     font-weight: bold;
@@ -278,29 +151,11 @@ header p {
 
 /* Section Styling */
 section {
-    padding-top: 60px !important;
-    padding: 20px 10px !important;
-    max-width: 1100px;
+    padding: 20px;
     margin: 80px auto;
     background: #fff;
     border-radius: 8px;
-}
-
-section .sectionHeader {
-    font-size: 2rem !important;
-    font-weight: bold;
-
-}
-
-/* Bamboo Specs Section */
-.bamboo-specs {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 40px;
-    background: #ff0000;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    max-width: 1100px;
 }
 
 /* Grid Layout */
@@ -319,70 +174,7 @@ section .sectionHeader {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 15px;
-    max-width: 300px;
     text-align: center;
-    overflow: hidden;
-    position: relative;
-}
-
-/* Product Hover Effect */
-.product:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Social Icons */
-.social-icons {
-    position: fixed;
-    left: -3px;
-    bottom: 55px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 9999;
-}
-
-.social-icon {
-    color: #256aff;
-    font-size: 20px;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 50%;
-    transition: background-color 0.5s ease;
-}
-
-
-#contact {
-    background-image: url(/style/map-marked-with-pins-phone.jpg);
-    background-size: contain;
-    background-attachment: fixed;
-}
-
-.productcatalogue {
-    background-image: url("/assets/images/markus-bluthner-RPDsh7SxCyw-unsplash.jpg");
-    max-width: 100%;
-    height: 400px; /* Adjust height as needed */
-    background-attachment: fixed;
-    background-size: 120%; /* Start with a zoomed-in background */
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 0%;
-    animation: zoomInOut 10s infinite; /* Add animation */
-}
-
-@keyframes zoomInOut {
-    0% {
-        background-size: 120%; /* Zoomed in */
-    }
-    50% {
-        background-size: 150%; /* Normal size */
-    }
-    100% {
-        background-size: 120%; /* Zoomed in again */
-    }
-}
-.productc{
-        background-color: rgba(19, 47, 17, 0.5); /* Red with 50% opacity */
 }
 
 /* Scroll-to-Top Button */
