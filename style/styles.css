@@ -117,68 +117,134 @@ h4 {
 }
 
 
-/* General navbar styles */
+
+
+
+
+
+/* General Styles */
+
 .navbar {
-    transition: all 0.3s ease;
     padding: 10px 20px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
-.navbar-nav {
-    display: flex;
-    gap: 15px;
+.navbar-brand {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .nav-link {
-    font-size: 16px;
     color: #333;
-    transition: color 0.2s ease;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+    display: inline-block;
+    /* Inline-block ensures horizontal alignment */
 }
 
 .nav-link:hover {
     color: #007bff;
 }
 
-.navbarHover {
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
     cursor: pointer;
+    display: none;
+    /* Hidden by default */
 }
 
-/* Styles for small screens */
-@media only screen and (max-width: 600px) {
-    .navbar {
-        padding: 5px 10px;
-        background-color: #f8f9fa;
-        /* Matches the bg-light class */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    /* Hidden by default */
+    width: 250px;
+    height: 100%;
+    background-color: #f8f9fa;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+    z-index: 2000;
+    padding: 20px;
+    display: none;
+    /* Hidden by default */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar .nav-item {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.sidebar.active {
+    right: 0;
+    display: block;
+}
+
+/* Normal navigation for large screens */
+.normal-nav {
+    display: block;
+    text-align: right;
+    /* Align links to the right */
+}
+
+.normal-nav .nav-item {
+    display: inline-block;
+    /* Ensure horizontal alignment */
+    list-style: none;
+    margin-right: 15px;
+    /* Add spacing between links */
+    vertical-align: middle;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .menu-btn {
+        display: block;
+        /* Show menu button on small screens */
     }
 
-    .navbar-collapse {
+    .sidebar {
+        display: block;
+        /* Sidebar becomes functional on small screens */
+    }
+
+    .normal-nav {
         display: none;
-        /* Hide the navbar by default */
-    }
-
-    .navbar-collapse.show {
-        display: block;
-        /* Show it when toggled */
-        background-color: #f8f9fa;
-        position: absolute;
-        top: 60px;
-        /* Adjust based on your navbar height */
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-        border-top: 1px solid #ddd;
-    }
-
-    .nav-link {
-        display: block;
-        padding: 10px;
-        text-align: center;
-        font-size: 18px;
-    }
-
-    .nav-item+.nav-item {
-        border-top: 1px solid #ddd;
+        /* Hide normal navigation on small screens */
     }
 }
+
+@media (min-width: 601px) {
+
+    .menu-btn,
+    .sidebar {
+        display: none;
+        /* Hide sidebar and menu button on larger screens */
+    }
+
+    .normal-nav {
+        display: block;
+        /* Show normal navigation on larger screens */
+    }
+}
+
+
+
+
+
+
+
+
+
 
 /* Header */
 header {
