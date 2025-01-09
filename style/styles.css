@@ -2,6 +2,11 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css');
 /* Import Bootstrap */
 
+
+
+
+
+
 .container {
     background-color: rgb(249, 249, 249);
     padding: 20px 20px 20px 20px;
@@ -33,6 +38,7 @@ body {
     color: #333;
     background-color: #ffffff;
     overflow-x: hidden;
+
 }
 
 
@@ -251,7 +257,7 @@ h4 {
 /* Header */
 header {
     height: 100vh;
-    background-image: url('/assets/images/bady-abbas-KkqvVpfIzrU-unsplash.jpg');
+    background-image: url('/assets/images/subtle-cinematics-3NIsCpQvaqM-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
